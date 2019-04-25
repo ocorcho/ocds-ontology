@@ -1,0 +1,654 @@
+{
+  "@context" : {
+    "milestoneType" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/milestoneType"
+    },
+    "dateEnquiryAnswered" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/dateEnquiryAnswered",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "isTendererFor" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/isTendererFor",
+      "@type" : "@id"
+    },
+    "isFundedBy" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/isFundedBy",
+      "@type" : "@id"
+    },
+    "Address" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Address"
+    },
+    "bidDate" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/bidDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "URL" : {
+      "@id" : "http://schema.org/URL",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "dateContractSigned" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/dateContractSigned",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "budgetId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/budgetId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "bidId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/bidId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "lotId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/lotId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "playsRoleIn" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/playsRoleIn",
+      "@type" : "@id"
+    },
+    "amendmentDate" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/amendmentDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Period" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+    },
+    "documentId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/documentId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Discussion" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Discussion"
+    },
+    "mainProcurementCategory" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/mainProcurementCategory"
+    },
+    "bidStatus" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/bidStatus"
+    },
+    "Organisation" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Organisation"
+    },
+    "hasAwardedContractPeriod" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod",
+      "@type" : "@id"
+    },
+    "isIssuedForAward" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/isIssuedForAward",
+      "@type" : "@id"
+    },
+    "Enquiry" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Enquiry"
+    },
+    "awardCriteria" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/awardCriteria"
+    },
+    "hasDocument" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasDocument",
+      "@type" : "@id"
+    },
+    "hasMaxEstimatedValue" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue",
+      "@type" : "@id"
+    },
+    "mileStoneStatus" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/mileStoneStatus"
+    },
+    "hasContractPeriod" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContractPeriod",
+      "@type" : "@id"
+    },
+    "additionalProcurementCategory" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/additionalProcurementCategory",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasRelatedParentProcess" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedParentProcess",
+      "@type" : "@id"
+    },
+    "isPayeeFor" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/isPayeeFor",
+      "@type" : "@id"
+    },
+    "additionalItemClassification" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/additionalItemClassification",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasRelatedRenewalProcess" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedRenewalProcess",
+      "@type" : "@id"
+    },
+    "hasSubmittedBid" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasSubmittedBid",
+      "@type" : "@id"
+    },
+    "enquiry" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/enquiry",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "milestoneCode" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/milestoneCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Budget" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Budget"
+    },
+    "hasMilestone" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasMilestone",
+      "@type" : "@id"
+    },
+    "hasEnquiry" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasEnquiry",
+      "@type" : "@id"
+    },
+    "hasAddress" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAddress",
+      "@type" : "@id"
+    },
+    "isRelatedToLot" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/isRelatedToLot",
+      "@type" : "@id"
+    },
+    "faxNumber" : {
+      "@id" : "http://schema.org/faxNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ContractingProcess" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/ContractingProcess"
+    },
+    "Milestone" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Milestone"
+    },
+    "valueCurrency" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/valueCurrency",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "periodStartDate" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/periodStartDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Contract" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Contract"
+    },
+    "transactionId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/transactionId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasClassification" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasClassification",
+      "@type" : "@id"
+    },
+    "additionalIdentifier" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/additionalIdentifier"
+    },
+    "hasContactPoint" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContactPoint",
+      "@type" : "@id"
+    },
+    "hasReservedValue" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasReservedValue",
+      "@type" : "@id"
+    },
+    "hasBidValue" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasBidValue",
+      "@type" : "@id"
+    },
+    "hasItemToBeProcured" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured",
+      "@type" : "@id"
+    },
+    "lastName" : {
+      "@id" : "http://xmlns.com/foaf/0.1/lastName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasRelatedEnquiry" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry",
+      "@type" : "@id"
+    },
+    "transactionDate" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/transactionDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "procurementMethodRationale" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/procurementMethodRationale",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "milestoneId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/milestoneId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isSupplierFor" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/isSupplierFor",
+      "@type" : "@id"
+    },
+    "email" : {
+      "@id" : "http://schema.org/email",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasContract" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContract",
+      "@type" : "@id"
+    },
+    "amendmentRationale" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/amendmentRationale",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Person" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    },
+    "Award" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+    },
+    "tenderId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/tenderId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "transactionDataSource" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/transactionDataSource",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "notation" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#notation"
+    },
+    "dateDocumentPublished" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/dateDocumentPublished",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "discussionThreadId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/discussionThreadId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isPayerFor" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/isPayerFor",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "postalCode" : {
+      "@id" : "http://schema.org/postalCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasAmendment" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAmendment",
+      "@type" : "@id"
+    },
+    "ContactPoint" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/ContactPoint"
+    },
+    "extendsContract" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/extendsContract",
+      "@type" : "@id"
+    },
+    "authorId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/authorId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasTender" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasTender",
+      "@type" : "@id"
+    },
+    "hasBudget" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasBudget",
+      "@type" : "@id"
+    },
+    "quantity" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/quantity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "procurementRationale" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/procurementRationale",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "periodEndDate" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/periodEndDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "contractStatus" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/contractStatus"
+    },
+    "Tender" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+    },
+    "hasContractImplementation" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContractImplementation",
+      "@type" : "@id"
+    },
+    "enquiryAnswer" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/enquiryAnswer",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasRelatedSubContract" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedSubContract",
+      "@type" : "@id"
+    },
+    "hasTransactionValue" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasTransactionValue",
+      "@type" : "@id"
+    },
+    "Value" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Value"
+    },
+    "enquiryDate" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/enquiryDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "firstName" : {
+      "@id" : "http://xmlns.com/foaf/0.1/firstName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "periodDurationInDays" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/periodDurationInDays",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "milestoneDateModified" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/milestoneDateModified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasTransaction" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasTransaction",
+      "@type" : "@id"
+    },
+    "region" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/region",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "identifier" : {
+      "@id" : "http://www.w3.org/ns/org#identifier"
+    },
+    "hasMinEstimatedValue" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue",
+      "@type" : "@id"
+    },
+    "enquiryId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/enquiryId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasContractedItem" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContractedItem",
+      "@type" : "@id"
+    },
+    "hasAdditionalClassification" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification",
+      "@type" : "@id"
+    },
+    "telephone" : {
+      "@id" : "http://schema.org/telephone",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Plan" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Plan"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "hasAwardValue" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAwardValue",
+      "@type" : "@id"
+    },
+    "valueAmount" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/valueAmount",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "hasEstimatedContractPeriod" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod",
+      "@type" : "@id"
+    },
+    "hasContractValue" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContractValue",
+      "@type" : "@id"
+    },
+    "lotStatus" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/lotStatus",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasLot" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasLot",
+      "@type" : "@id"
+    },
+    "Project" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Project"
+    },
+    "Lot" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Lot"
+    },
+    "streetAddress" : {
+      "@id" : "http://schema.org/streetAddress",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasAwardPeriod" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasRelatedUnsuccessfulProcess" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedUnsuccessfulProcess",
+      "@type" : "@id"
+    },
+    "Bid" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Bid"
+    },
+    "numberOfTenderers" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/numberOfTenderers",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Implementation" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Implementation"
+    },
+    "hasAdditionalContactPoint" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAdditionalContactPoint",
+      "@type" : "@id"
+    },
+    "awardId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/awardId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "procurementMethodDetails" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/procurementMethodDetails",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "awardCriteriaDetails" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/awardCriteriaDetails",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "URI" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/URI",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "isIssuedForTender" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/isIssuedForTender",
+      "@type" : "@id"
+    },
+    "hasRelatedPriorProcess" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedPriorProcess",
+      "@type" : "@id"
+    },
+    "hasEnquiryPeriod" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasEnquiryPeriod",
+      "@type" : "@id"
+    },
+    "hasRelatedFrameworkProcess" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedFrameworkProcess",
+      "@type" : "@id"
+    },
+    "contractId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/contractId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "legalName" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/legalName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "submissionMethodDetails" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/submissionMethodDetails",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasRelatedPlanningProcess" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedPlanningProcess",
+      "@type" : "@id"
+    },
+    "hasRequirement" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRequirement",
+      "@type" : "@id"
+    },
+    "hasAwardedItem" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAwardedItem",
+      "@type" : "@id"
+    },
+    "unit" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/unit",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasRelatedProcess" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess",
+      "@type" : "@id"
+    },
+    "hasRelatedReplacementProcess" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedReplacementProcess",
+      "@type" : "@id"
+    },
+    "usesDataProperty" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/usesDataProperty"
+    },
+    "hasTenderPeriod" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod",
+      "@type" : "@id"
+    },
+    "itemId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/itemId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "milestoneDueDate" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/milestoneDueDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "projectId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/projectId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "addressLocality" : {
+      "@id" : "http://schema.org/addressLocality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "awardDate" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/awardDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "hasReceivedBid" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasReceivedBid",
+      "@type" : "@id"
+    },
+    "isBuyerFor" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/isBuyerFor",
+      "@type" : "@id"
+    },
+    "Document" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Document"
+    },
+    "eligibilityCriteria" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/eligibilityCriteria",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "language" : {
+      "@id" : "http://purl.org/dc/terms/language",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Transaction" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Transaction"
+    },
+    "requirementId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/requirementId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isProcuringEntityFor" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor",
+      "@type" : "@id"
+    },
+    "awardStatus" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/awardStatus"
+    },
+    "amendmentId" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/amendmentId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "procurementMethod" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/procurementMethod"
+    },
+    "Requirement" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Requirement"
+    },
+    "hasAward" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAward",
+      "@type" : "@id"
+    },
+    "Item" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Item"
+    },
+    "submissionMethod" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/submissionMethod"
+    },
+    "belongsToDiscussion" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/belongsToDiscussion",
+      "@type" : "@id"
+    },
+    "addressCountry" : {
+      "@id" : "http://schema.org/addressCountry",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasEnquiryAuthor" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasEnquiryAuthor",
+      "@type" : "@id"
+    },
+    "documentType" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/documentType"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasLotValue" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasLotValue",
+      "@type" : "@id"
+    },
+    "periodMaxExtentDate" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/periodMaxExtentDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "isSignatoryForContract" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/isSignatoryForContract",
+      "@type" : "@id"
+    },
+    "milestoneDateMet" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/milestoneDateMet",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasPlan" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/hasPlan",
+      "@type" : "@id"
+    },
+    "dateDocumentModified" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/dateDocumentModified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "tenderStatus" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/tenderStatus"
+    },
+    "format" : {
+      "@id" : "http://purl.org/dc/terms/format",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Amendment" : {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Amendment"
+    }
+  }
+}
