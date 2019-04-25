@@ -1,0 +1,3012 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.sintef.no/ontology/ocds/"
+     xml:base="http://www.sintef.no/ontology/ocds/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ocds="https://theybuyforyou.eu/ontology/ocds/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.sintef.no/ontology/ocds/">
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/usesDataProperty -->
+
+
+    <owl:AnnotationProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/usesDataProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/belongsToDiscussion -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/belongsToDiscussion">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Enquiry"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Discussion"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Enquiries extension.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/extendsContract -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/extendsContract">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Contract extensions via supplementary contract.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Item"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Item &lt;aditionalClassification&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasAdditionalContactPoint -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasAdditionalContactPoint">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Organisation"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/ContactPoint"/>
+        <rdfs:comment>OCDS schema v1.1: Additional Contact Points extension.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasAddress -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasAddress">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Organisation"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Address"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Organization &lt;address&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasAmendment -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasAmendment">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Award"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Amendment"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender, Award, Contract &lt;amendments&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasAward -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasAward">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/ContractingProcess"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Award"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;awardPeriod&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasAwardValue -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasAwardValue">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Award"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Award &lt;value&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Award"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Award &lt;contractPeriod&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasAwardedItem -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasAwardedItem">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Award"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Item"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Award &lt;item&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasBidValue -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasBidValue">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Bid"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Bid statistics extension.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasBudget -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasBudget">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Plan"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Budget"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Plan &lt;budget&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasClassification -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasClassification">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Item"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Item &lt;classification&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasContactPoint -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasContactPoint">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Organisation"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/ContactPoint"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Parties &lt;contactPoint&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasContract -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasContract">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/ContractingProcess"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasContractImplementation -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasContractImplementation">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Implementation"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Contract &lt;implementation&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasContractPeriod -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasContractPeriod">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Contract &lt;period&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasContractValue -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasContractValue">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Contract &lt;value&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasContractedItem -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasContractedItem">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Item"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Contract &lt;items&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasDocument -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasDocument">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Award"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Bid"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Implementation"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Milestone"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Plan"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Document"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Milestone documents extension.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Plan, Tender, Award, Contract, Implementation, Bid &lt;documents&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasEnquiry -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasEnquiry">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Enquiry"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Enquiries extension.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasEnquiryAuthor -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasEnquiryAuthor">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Enquiry"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Enquiries extension.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasEnquiryPeriod -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasEnquiryPeriod">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;enquiryPeriod&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;contractPeriod&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Item"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;items&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasLot -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasLot">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Lot"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Lots extension.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasLotValue -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasLotValue">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Lot"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Lots extension.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;value&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasMilestone -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasMilestone">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Implementation"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Plan"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Milestone"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Plan, Tender, Contract, Implementation &lt;milestones&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;minValue&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasPlan -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasPlan">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/ContractingProcess"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Plan"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasReceivedBid -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasReceivedBid">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Bid"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Bids statistics extension.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Item"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Lot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Enquiry"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Enquiries extension.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasRelatedFrameworkProcess -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasRelatedFrameworkProcess">
+        <rdfs:subPropertyOf rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasRelatedParentProcess -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasRelatedParentProcess">
+        <rdfs:subPropertyOf rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasRelatedPlanningProcess -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasRelatedPlanningProcess">
+        <rdfs:subPropertyOf rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasRelatedPriorProcess -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasRelatedPriorProcess">
+        <rdfs:subPropertyOf rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/ContractingProcess"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/ContractingProcess"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Contract &lt;relatedProcesses&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasRelatedRenewalProcess -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasRelatedRenewalProcess">
+        <rdfs:subPropertyOf rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasRelatedReplacementProcess -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasRelatedReplacementProcess">
+        <rdfs:subPropertyOf rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasRelatedSubContract -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasRelatedSubContract">
+        <rdfs:subPropertyOf rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasRelatedUnsuccessfulProcess -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasRelatedUnsuccessfulProcess">
+        <rdfs:subPropertyOf rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasRequirement -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasRequirement">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Requirement"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Requirements extension.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasReservedValue -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasReservedValue">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Budget"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Budget &lt;amount&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasSubmittedBid -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasSubmittedBid">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Organisation"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Bid"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Bid statistics extension.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasTender -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasTender">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/ContractingProcess"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;tenderPeriod&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasTransaction -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasTransaction">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Implementation"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Transaction"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Implementation &lt;transactions&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/hasTransactionValue -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/hasTransactionValue">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Transaction"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Transaction &lt;value&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/isBuyerFor -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/isBuyerFor">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Organisation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/ContractingProcess"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Multiple buyers - contract level extension.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Release &lt;buyer&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/isFundedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/isFundedBy">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/ContractingProcess"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Project"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/isIssuedForAward -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/isIssuedForAward">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Award"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Contract &lt;awardID&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/isIssuedForTender -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/isIssuedForTender">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Award"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/isPayeeFor -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/isPayeeFor">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Organisation"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Transaction"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Transaction &lt;payee&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/isPayerFor -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/isPayerFor">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Organisation"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Transaction"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Transaction &lt;payer&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Organisation"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;procuringEntity&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/isRelatedToLot -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/isRelatedToLot">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Award"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Document"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Item"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Milestone"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Lot"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Lots extension.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/isSignatoryForContract -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/isSignatoryForContract">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Organisation"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Signatories extension.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/isSupplierFor -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/isSupplierFor">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Organisation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Award"/>
+                    <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:isDefinedBy>OCDS schema v1.1:  Contract suppliers extension.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Award &lt;suppliers&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/isTendererFor -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/isTendererFor">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Organisation"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;tenderers&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/playsRoleIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/playsRoleIn">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Organisation"/>
+        <rdfs:range rdf:resource="https://theybuyforyou.eu/ontology/ocds/ContractingProcess"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Organization &lt;roles&gt;.</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Use in OCDS ontology: Budget, Tender, Award, Contract, Amendment, Document, Item, Milestone, ContractingProcess, Enquiry, Requirement.</rdfs:comment>
+        <rdfs:isDefinedBy>http://purl.org/dc/terms/description</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/format">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>Use in OCDS ontology: Document.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://purl.org/dc/terms/format</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>https://www.iana.org/assignments/media-types/media-types.xhtml</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/language">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>Use in OCDS ontology: Document.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://purl.org/dc/terms/language</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Use in OCDS ontology: Project, Tender, Award, Contract, Document, Milestone, ContractingProcess, Enquiry.</rdfs:comment>
+        <rdfs:isDefinedBy>http://purl.org/dc/terms/title</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/URL -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/URL">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Use in OCDS ontology: ContactPoint, Document.</rdfs:comment>
+        <rdfs:isDefinedBy>https://schema.org/URL</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/addressCountry -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/addressCountry">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Use in OCDS ontology: Address.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Address &lt;countryName&gt;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://schema.org/addressCountry</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/addressLocality -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/addressLocality">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Use in OCDS ontology: Address.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Address &lt;locality&gt;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://schema.org/addressLocality</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/email -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/email">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>OCDS schema v1.1: ContactPoint &lt;email&gt;.</rdfs:comment>
+        <rdfs:comment>Use in OCDS ontology: ContactPoint.</rdfs:comment>
+        <rdfs:isDefinedBy>http://schema.org/email</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/faxNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/faxNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: ContactPoint &lt;faxNumber&gt;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>Use in OCDS ontology: ContactPoint.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://schema.org/faxNumber</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Use in OCDS ontology: Organization, ContactPoint, Author.</rdfs:comment>
+        <rdfs:isDefinedBy>https://schema.org/name</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/postalCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/postalCode">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Use in OCDS ontology: Address.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Address &lt;postalCode&gt;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://schema.org/postalCode</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/streetAddress -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/streetAddress">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Use in OCDS ontology: Address.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Address &lt;streetAddress&gt;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://schema.org/streetAddress</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/telephone -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/telephone">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>OCDS schema v1.1: ContactPoint &lt;telephone&gt;.</rdfs:comment>
+        <rdfs:comment>Use in OCDS ontology: ContactPoint.</rdfs:comment>
+        <rdfs:isDefinedBy>http://schema.org/telephone</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Organisation"/>
+        <rdfs:comment>Many different national and international identifier schemes are available from other vocabularies. The ORG ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value. Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for skos:notation of which this property is a specialization.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Parties &lt;identifier&gt;, i.e., Primary identifier.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>https://www.w3.org/TR/vocab-org/#org:identifier</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/firstName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/firstName">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>http://xmlns.com/foaf/0.1/firstName</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/lastName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/lastName">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>http://xmlns.com/foaf/0.1/lastName</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/URI -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/URI">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>Use in OCDS ontology: Organization, Budget, Transaction.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/additionalIdentifier -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/additionalIdentifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Organisation"/>
+        <rdfs:comment>Similar to https://www.w3.org/TR/vocab-org/#org:identifier</rdfs:comment>
+        <rdfs:comment>The particular identifier scheme should be indicated by the datatype of the identifier value. Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for skos:notation of which this property is a specialization.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Parties &lt;additionalIdentifier&gt;, i.e., Additional identifier.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/additionalItemClassification -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/additionalItemClassification">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Item"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Item &lt;additionalClassification&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/additionalProcurementCategory -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/additionalProcurementCategory">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;additionalProcurementCategories&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/amendmentDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/amendmentDate">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Amendment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Amendment &lt;date&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/amendmentId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/amendmentId">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Amendment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Amendment &lt;id&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/amendmentRationale -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/amendmentRationale">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Amendment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Amendment &lt;rationale&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/authorId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/authorId">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Enquiries extension.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/awardCriteria -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/awardCriteria">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>bestProposal</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>bestValueToGovernment</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>costOnly</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>lowestCost</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>priceOnly</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>qualityOnly</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first>ratedCriteria</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first>singleBidOnly</rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;awardCriteria&gt;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://standard.open-contracting.org/latest/en/schema/codelists/#award-criteria</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/awardCriteriaDetails -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/awardCriteriaDetails">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;awardCriteriaDetails&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/awardDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/awardDate">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Award"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Award &lt;date&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/awardId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/awardId">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Award"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Award &lt;awardId&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/awardStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/awardStatus">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Award"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>active</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>cancelled</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>pending</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>unsuccessful</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Award &lt;awardStatus&gt;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://standard.open-contracting.org/latest/en/schema/codelists/#award-status</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/bidDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/bidDate">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Bid"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Bids extension.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/bidId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/bidId">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Bid"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Bids extension.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/bidStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/bidStatus">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Bid"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>disqualified</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>invited</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>pending</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>valid</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>withdawn</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Bids extension.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/budgetId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/budgetId">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Budget"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS ontology: Budget &lt;id&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/contractId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/contractId">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Contract &lt;id&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/contractStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/contractStatus">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>active</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>cancelled</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>pending</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>terminated</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Contract &lt;status&gt;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://standard.open-contracting.org/latest/en/schema/codelists/#contract-status</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/dateContractSigned -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/dateContractSigned">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Contract &lt;dateSigned&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/dateDocumentModified -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/dateDocumentModified">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Document &lt;dateModified&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/dateDocumentPublished -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/dateDocumentPublished">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Document &lt;datePublished&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/dateEnquiryAnswered -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/dateEnquiryAnswered">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Enquiry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Enquiries extension.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/discussionThreadId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/discussionThreadId">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Discussion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Enquiries extension.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/documentId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/documentId">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Document &lt;id&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/documentType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/documentType">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Document"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>assetAndLiabilityAssessment</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>awardNotice</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>bidders</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>biddingDocuments</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>billOfQuantity</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>cancellationDetails</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first>clarifications</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first>complaints</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first>completionCertificate</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first>conflictOfInterest</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first>contractAnnexe</rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                <rdf:first>contractArrangements</rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                        <rdf:first>contractDraft</rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                <rdf:first>contractGuarantees</rdf:first>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                        <rdf:first>contractNotice</rdf:first>
+                                                                                                                                        <rdf:rest>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                <rdf:first>contractSchedule</rdf:first>
+                                                                                                                                                <rdf:rest>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                        <rdf:first>contractSigned</rdf:first>
+                                                                                                                                                        <rdf:rest>
+                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                <rdf:first>contractSummary</rdf:first>
+                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                        <rdf:first>debarments</rdf:first>
+                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                <rdf:first>eligibilityCriteria</rdf:first>
+                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                        <rdf:first>environmentalImpact</rdf:first>
+                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                <rdf:first>evaluationCriteria</rdf:first>
+                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                        <rdf:first>evaluationReports</rdf:first>
+                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                <rdf:first>feasibilityStudy</rdf:first>
+                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                        <rdf:first>finalAudit</rdf:first>
+                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                <rdf:first>financialProgressReport</rdf:first>
+                                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                        <rdf:first>hearingNotice</rdf:first>
+                                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                <rdf:first>illustration</rdf:first>
+                                                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                        <rdf:first>marketStudies</rdf:first>
+                                                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                <rdf:first>needsAssessment</rdf:first>
+                                                                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                        <rdf:first>physicalProgressReport</rdf:first>
+                                                                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                                <rdf:first>procurementPlan</rdf:first>
+                                                                                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                                        <rdf:first>projectPlan</rdf:first>
+                                                                                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                                                <rdf:first>riskProvisions</rdf:first>
+                                                                                                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                                                        <rdf:first>shortlistedFirms</rdf:first>
+                                                                                                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                                                                <rdf:first>subContract</rdf:first>
+                                                                                                                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                                                                        <rdf:first>submissionDocuments</rdf:first>
+                                                                                                                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                                                                                <rdf:first>technicalSpecifications</rdf:first>
+                                                                                                                                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                                                                                        <rdf:first>tenderNotice</rdf:first>
+                                                                                                                                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                                                                                                                                                                                <rdf:first>winningBid</rdf:first>
+                                                                                                                                                                                                                                                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                </rdf:rest>
+                                                                                                                                                            </rdf:Description>
+                                                                                                                                                        </rdf:rest>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </rdf:rest>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:rest>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:isDefinedBy>OCDS schema: Document &lt;documentType&gt;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://standard.open-contracting.org/latest/en/schema/codelists/#document-type</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/eligibilityCriteria -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/eligibilityCriteria">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;eligibilityCriteria&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/enquiry -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/enquiry">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;hasEnquiries&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/enquiryAnswer -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/enquiryAnswer">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Enquiry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Enquiries extension.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/enquiryDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/enquiryDate">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Enquiry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Enquiries extension.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/enquiryId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/enquiryId">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Enquiry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Enquiries extension.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/itemId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/itemId">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Item"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Item &lt;id&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/legalName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/legalName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Use in OCDS ontology: Organization.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Identifier &lt;legalName&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/lotId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/lotId">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Lot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Lots extension.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/lotStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/lotStatus">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Lot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Lots extension.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/mainProcurementCategory -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/mainProcurementCategory">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>goods</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>services</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>works</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;mainProcurementCategory&gt;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://standard.open-contracting.org/latest/en/schema/codelists/#procurement-category</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/mileStoneStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/mileStoneStatus">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Milestone"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>met</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>notMet</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>partiallyMet</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>scheduled</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Milestone &lt;status&gt;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://standard.open-contracting.org/latest/en/schema/codelists/#milestone-status</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/milestoneCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/milestoneCode">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Milestone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Milestone &lt;code&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/milestoneDateMet -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/milestoneDateMet">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Milestone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Milestone &lt;dateMet&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/milestoneDateModified -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/milestoneDateModified">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Milestone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Milestone &lt;dateModified&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/milestoneDueDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/milestoneDueDate">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Milestone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Milestone &lt;dueDate&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/milestoneId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/milestoneId">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Milestone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Milestone &lt;id&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/milestoneType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/milestoneType">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Milestone"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>approval</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>assessment</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>delivery</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>engagement</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>financing</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>preProcurement</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first>reporting</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Milestone &lt;type&gt;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://standard.open-contracting.org/latest/en/schema/codelists/#milestone-type</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/numberOfTenderers -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/numberOfTenderers">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;numberOfTenderers&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/periodDurationInDays -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/periodDurationInDays">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Period &lt;durationInDays&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/periodEndDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/periodEndDate">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: periodEndDate.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/periodMaxExtentDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/periodMaxExtentDate">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Period &lt;maxExtentDate&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/periodStartDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/periodStartDate">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Period &lt;startDate&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/procurementMethod -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/procurementMethod">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>direct</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>limited</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>open</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>selective</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;procurementMethod&gt;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://standard.open-contracting.org/latest/en/schema/codelists/#method</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/procurementMethodDetails -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/procurementMethodDetails">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;procurementMethodDetails&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/procurementMethodRationale -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/procurementMethodRationale">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;procurementMethodRationale&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/procurementRationale -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/procurementRationale">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Plan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Plan &lt;rationale&gt;</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/projectId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/projectId">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Budget &lt;projectId&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/quantity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/quantity">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Use in OCDS ontology: Item.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema: Item &lt;qauntity&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/region -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/region">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Use in OCDS ontology: Address.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema: Address &lt;region&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/requirementId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/requirementId">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Requirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/submissionMethod -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/submissionMethod">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>electronicAuction</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>electronicSubmission</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>inPerson</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>written</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;submissionMethod&gt;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://standard.open-contracting.org/latest/en/schema/codelists/#submission-method</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/submissionMethodDetails -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/submissionMethodDetails">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;submissionMethodDetails&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/tenderId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/tenderId">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;id&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/tenderStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/tenderStatus">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>active</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>cancelled</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>complete</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>planned</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>planning</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>unsuccessful</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first>withdrawn</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender &lt;status&gt;.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://standard.open-contracting.org/latest/en/schema/codelists/#tender-status</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/transactionDataSource -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/transactionDataSource">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Transaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Transaction &lt;source&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/transactionDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/transactionDate">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Transaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Transaction &lt;date&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/transactionId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/transactionId">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Transaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Transaction &lt;id&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/unit -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/unit">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Use in OCDS ontology: Item.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema: Item &lt;unit&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/valueAmount -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/valueAmount">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Value &lt;amount&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/valueCurrency -->
+
+
+    <owl:DatatypeProperty rdf:about="https://theybuyforyou.eu/ontology/ocds/valueCurrency">
+        <rdfs:domain rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Value &lt;currency&gt;.</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:isDefinedBy>OCDS schema v1.1: Enquiries extension.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>http://xmlns.com/foaf/0.1/Person</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Address -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Address">
+        <rdfs:comment>Uses also the following data type properties: addressCountry, addressLocality, postalCode, streeAddress, region.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Adress.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://schema.org/addressCountry"/>
+        <ocds:usesDataProperty rdf:resource="http://schema.org/addressLocality"/>
+        <ocds:usesDataProperty rdf:resource="http://schema.org/postalCode"/>
+        <ocds:usesDataProperty rdf:resource="http://schema.org/streetAddress"/>
+        <ocds:usesDataProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/region"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Amendment -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Amendment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasAmendment"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Amendment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Uses also the following data type properties: description.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Amendment.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/description"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Award -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Award">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasAmendment"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Amendment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasAwardValue"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasAwardedItem"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Item"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Document"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/isIssuedForTender"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/isRelatedToLot"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Lot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Uses also the following data type properties: title, description.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Award.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/description"/>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/title"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Bid -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Bid">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasBidValue"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Document"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Bid statistics extension.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Budget -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Budget">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasReservedValue"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Uses also the following data type properties: description, URI.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Budget.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/description"/>
+        <ocds:usesDataProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/URI"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/ContactPoint -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/ContactPoint">
+        <rdfs:comment>Uses also the following data type properties: faxNumber, telephone, email, addressCountry, postalCode, addressLocality, streetAddress, name, url.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: ContactPoint.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://schema.org/URL"/>
+        <ocds:usesDataProperty rdf:resource="http://schema.org/addressCountry"/>
+        <ocds:usesDataProperty rdf:resource="http://schema.org/addressLocality"/>
+        <ocds:usesDataProperty rdf:resource="http://schema.org/email"/>
+        <ocds:usesDataProperty rdf:resource="http://schema.org/faxNumber"/>
+        <ocds:usesDataProperty rdf:resource="http://schema.org/name"/>
+        <ocds:usesDataProperty rdf:resource="http://schema.org/postalCode"/>
+        <ocds:usesDataProperty rdf:resource="http://schema.org/streetAddress"/>
+        <ocds:usesDataProperty rdf:resource="http://schema.org/telephone"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Contract -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Contract">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/extendsContract"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasAmendment"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Amendment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasContractImplementation"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Implementation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasContractPeriod"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasContractValue"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasContractedItem"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Item"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Document"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasMilestone"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Milestone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/isIssuedForAward"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Award"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Uses also the following data type properties: title, description.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Contact.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/description"/>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/title"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/ContractingProcess -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/ContractingProcess">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasAward"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Award"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasContract"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasPlan"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Plan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/ContractingProcess"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasTender"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Title and description properties is extracted from the following extension: OCDS v1.1. Process level title and description.</rdfs:comment>
+        <rdfs:comment>Uses also the following data type properties: title, description.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/description"/>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/title"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Discussion -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Discussion">
+        <rdfs:comment>OCDS schema v1.1: Enquiries extension.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Document -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Document">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/isRelatedToLot"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Lot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Uses also the following data type properties: language, format, title, description, url.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Document.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/description"/>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/format"/>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/language"/>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/title"/>
+        <ocds:usesDataProperty rdf:resource="http://schema.org/URL"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Enquiry -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Enquiry">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasEnquiryAuthor"/>
+                <owl:allValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Uses also the following data type properties: title, description.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Enquiries extension.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/description"/>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/title"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Implementation -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Implementation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Document"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasMilestone"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Milestone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasTransaction"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Transaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Implementation.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Item -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Item">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasClassification"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Enquiry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/isRelatedToLot"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Lot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Uses also following data properties: quantity, unit, description.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Item.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/description"/>
+        <ocds:usesDataProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/quantity"/>
+        <ocds:usesDataProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/unit"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Lot -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Lot">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasLotValue"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Enquiry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Uses also the following data types: title, description.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Lots extension.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/description"/>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/title"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Milestone -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Milestone">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Document"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/isRelatedToLot"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Lot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Uses also the following data type properties: title, description.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Milestone.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/description"/>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/title"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Organisation -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Organisation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasAdditionalContactPoint"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/ContactPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasAddress"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Address"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasContactPoint"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/ContactPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasSubmittedBid"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Bid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/isBuyerFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+                            <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/ContractingProcess"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/isPayeeFor"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Transaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/isPayerFor"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Transaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/isSignatoryForContract"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/isSupplierFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Award"/>
+                            <rdf:Description rdf:about="https://theybuyforyou.eu/ontology/ocds/Contract"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/isTendererFor"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Tender"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/playsRoleIn"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/ContractingProcess"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Uses also the following data type properties: legalName, name, URI.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Organization.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://schema.org/name"/>
+        <ocds:usesDataProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/URI"/>
+        <ocds:usesDataProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/legalName"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Period -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Period">
+        <rdfs:isDefinedBy>OCDS schema v1.1: Period.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Plan -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Plan">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasBudget"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Budget"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Document"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasMilestone"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Milestone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Planning.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Project -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Project">
+        <rdfs:comment>Uses also the following data type properties: title.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Budget.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/title"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Requirement -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Requirement">
+        <rdfs:comment>Uses also the following data type properties: description.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Requirements extension.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/description"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Tender -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Tender">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasAmendment"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Amendment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasDocument"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Document"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasEnquiry"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Enquiry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasEnquiryPeriod"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Item"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasLot"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Lot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasMilestone"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Milestone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasReceivedBid"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Bid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasRequirement"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Requirement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Period"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Uses also the following data type properties: title, description.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Tender.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/description"/>
+        <ocds:usesDataProperty rdf:resource="http://purl.org/dc/terms/title"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Transaction -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Transaction">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/hasTransactionValue"/>
+                <owl:allValuesFrom rdf:resource="https://theybuyforyou.eu/ontology/ocds/Value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Uses also the following data type properties: URI.</rdfs:comment>
+        <rdfs:isDefinedBy>OCDS schema v1.1: Transaction.</rdfs:isDefinedBy>
+        <ocds:usesDataProperty rdf:resource="https://theybuyforyou.eu/ontology/ocds/URI"/>
+    </owl:Class>
+    
+
+
+    <!-- https://theybuyforyou.eu/ontology/ocds/Value -->
+
+
+    <owl:Class rdf:about="https://theybuyforyou.eu/ontology/ocds/Value">
+        <rdfs:isDefinedBy>OCDS schema v1.1: Value.</rdfs:isDefinedBy>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
+
+

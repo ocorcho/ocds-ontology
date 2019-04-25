@@ -1,0 +1,1841 @@
+@prefix : <http://www.sintef.no/ontology/ocds/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.sintef.no/ontology/ocds/> .
+
+<http://www.sintef.no/ontology/ocds/> rdf:type owl:Ontology ;
+                                       owl:imports <http://www.w3.org/2004/02/skos/core> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://theybuyforyou.eu/ontology/ocds/usesDataProperty
+<https://theybuyforyou.eu/ontology/ocds/usesDataProperty> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://theybuyforyou.eu/ontology/ocds/belongsToDiscussion
+<https://theybuyforyou.eu/ontology/ocds/belongsToDiscussion> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Enquiry> ;
+                                                             rdfs:range <https://theybuyforyou.eu/ontology/ocds/Discussion> ;
+                                                             rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/extendsContract
+<https://theybuyforyou.eu/ontology/ocds/extendsContract> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Contract> ;
+                                                         rdfs:range <https://theybuyforyou.eu/ontology/ocds/Contract> ;
+                                                         rdfs:isDefinedBy "OCDS schema v1.1: Contract extensions via supplementary contract." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification
+<https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Item> ;
+                                                                     rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                     rdfs:isDefinedBy "OCDS schema v1.1: Item <aditionalClassification>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasAdditionalContactPoint
+<https://theybuyforyou.eu/ontology/ocds/hasAdditionalContactPoint> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Organisation> ;
+                                                                   rdfs:range <https://theybuyforyou.eu/ontology/ocds/ContactPoint> ;
+                                                                   rdfs:comment "OCDS schema v1.1: Additional Contact Points extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasAddress
+<https://theybuyforyou.eu/ontology/ocds/hasAddress> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Organisation> ;
+                                                    rdfs:range <https://theybuyforyou.eu/ontology/ocds/Address> ;
+                                                    rdfs:isDefinedBy "OCDS schema v1.1: Organization <address>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasAmendment
+<https://theybuyforyou.eu/ontology/ocds/hasAmendment> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain [ rdf:type owl:Class ;
+                                                                    owl:unionOf ( <https://theybuyforyou.eu/ontology/ocds/Award>
+                                                                                  <https://theybuyforyou.eu/ontology/ocds/Contract>
+                                                                                  <https://theybuyforyou.eu/ontology/ocds/Tender>
+                                                                                )
+                                                                  ] ;
+                                                      rdfs:range <https://theybuyforyou.eu/ontology/ocds/Amendment> ;
+                                                      rdfs:isDefinedBy "OCDS schema v1.1: Tender, Award, Contract <amendments>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasAward
+<https://theybuyforyou.eu/ontology/ocds/hasAward> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> ;
+                                                  rdfs:range <https://theybuyforyou.eu/ontology/ocds/Award> ;
+                                                  rdfs:isDefinedBy "OCDS schema v1.1." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod
+<https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                        rdfs:range <https://theybuyforyou.eu/ontology/ocds/Period> ;
+                                                        rdfs:isDefinedBy "OCDS schema v1.1: Tender <awardPeriod>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasAwardValue
+<https://theybuyforyou.eu/ontology/ocds/hasAwardValue> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Award> ;
+                                                       rdfs:range <https://theybuyforyou.eu/ontology/ocds/Value> ;
+                                                       rdfs:isDefinedBy "OCDS schema v1.1: Award <value>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod
+<https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Award> ;
+                                                                  rdfs:range <https://theybuyforyou.eu/ontology/ocds/Period> ;
+                                                                  rdfs:isDefinedBy "OCDS schema v1.1: Award <contractPeriod>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasAwardedItem
+<https://theybuyforyou.eu/ontology/ocds/hasAwardedItem> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Award> ;
+                                                        rdfs:range <https://theybuyforyou.eu/ontology/ocds/Item> ;
+                                                        rdfs:isDefinedBy "OCDS schema v1.1: Award <item>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasBidValue
+<https://theybuyforyou.eu/ontology/ocds/hasBidValue> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Bid> ;
+                                                     rdfs:range <https://theybuyforyou.eu/ontology/ocds/Value> ;
+                                                     rdfs:isDefinedBy "OCDS schema v1.1: Bid statistics extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasBudget
+<https://theybuyforyou.eu/ontology/ocds/hasBudget> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Plan> ;
+                                                   rdfs:range <https://theybuyforyou.eu/ontology/ocds/Budget> ;
+                                                   rdfs:isDefinedBy "OCDS schema v1.1: Plan <budget>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasClassification
+<https://theybuyforyou.eu/ontology/ocds/hasClassification> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Item> ;
+                                                           rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                           rdfs:isDefinedBy "OCDS schema v1.1: Item <classification>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasContactPoint
+<https://theybuyforyou.eu/ontology/ocds/hasContactPoint> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Organisation> ;
+                                                         rdfs:range <https://theybuyforyou.eu/ontology/ocds/ContactPoint> ;
+                                                         rdfs:isDefinedBy "OCDS schema v1.1: Parties <contactPoint>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasContract
+<https://theybuyforyou.eu/ontology/ocds/hasContract> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> ;
+                                                     rdfs:range <https://theybuyforyou.eu/ontology/ocds/Contract> ;
+                                                     rdfs:isDefinedBy "OCDS schema v1.1." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasContractImplementation
+<https://theybuyforyou.eu/ontology/ocds/hasContractImplementation> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Contract> ;
+                                                                   rdfs:range <https://theybuyforyou.eu/ontology/ocds/Implementation> ;
+                                                                   rdfs:isDefinedBy "OCDS schema v1.1: Contract <implementation>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasContractPeriod
+<https://theybuyforyou.eu/ontology/ocds/hasContractPeriod> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Contract> ;
+                                                           rdfs:range <https://theybuyforyou.eu/ontology/ocds/Period> ;
+                                                           rdfs:isDefinedBy "OCDS schema v1.1: Contract <period>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasContractValue
+<https://theybuyforyou.eu/ontology/ocds/hasContractValue> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Contract> ;
+                                                          rdfs:range <https://theybuyforyou.eu/ontology/ocds/Value> ;
+                                                          rdfs:isDefinedBy "OCDS schema v1.1: Contract <value>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasContractedItem
+<https://theybuyforyou.eu/ontology/ocds/hasContractedItem> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Contract> ;
+                                                           rdfs:range <https://theybuyforyou.eu/ontology/ocds/Item> ;
+                                                           rdfs:isDefinedBy "OCDS schema v1.1: Contract <items>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasDocument
+<https://theybuyforyou.eu/ontology/ocds/hasDocument> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain [ rdf:type owl:Class ;
+                                                                   owl:unionOf ( <https://theybuyforyou.eu/ontology/ocds/Award>
+                                                                                 <https://theybuyforyou.eu/ontology/ocds/Bid>
+                                                                                 <https://theybuyforyou.eu/ontology/ocds/Contract>
+                                                                                 <https://theybuyforyou.eu/ontology/ocds/Implementation>
+                                                                                 <https://theybuyforyou.eu/ontology/ocds/Milestone>
+                                                                                 <https://theybuyforyou.eu/ontology/ocds/Plan>
+                                                                                 <https://theybuyforyou.eu/ontology/ocds/Tender>
+                                                                               )
+                                                                 ] ;
+                                                     rdfs:range <https://theybuyforyou.eu/ontology/ocds/Document> ;
+                                                     rdfs:isDefinedBy "OCDS schema v1.1: Milestone documents extension." ,
+                                                                      "OCDS schema v1.1: Plan, Tender, Award, Contract, Implementation, Bid <documents>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasEnquiry
+<https://theybuyforyou.eu/ontology/ocds/hasEnquiry> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                    rdfs:range <https://theybuyforyou.eu/ontology/ocds/Enquiry> ;
+                                                    rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasEnquiryAuthor
+<https://theybuyforyou.eu/ontology/ocds/hasEnquiryAuthor> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Enquiry> ;
+                                                          rdfs:range <http://xmlns.com/foaf/0.1/Person> ;
+                                                          rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasEnquiryPeriod
+<https://theybuyforyou.eu/ontology/ocds/hasEnquiryPeriod> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                          rdfs:range <https://theybuyforyou.eu/ontology/ocds/Period> ;
+                                                          rdfs:isDefinedBy "OCDS schema v1.1: Tender <enquiryPeriod>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod
+<https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                                    rdfs:range <https://theybuyforyou.eu/ontology/ocds/Period> ;
+                                                                    rdfs:isDefinedBy "OCDS schema v1.1: Tender <contractPeriod>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured
+<https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                             rdfs:range <https://theybuyforyou.eu/ontology/ocds/Item> ;
+                                                             rdfs:isDefinedBy "OCDS schema v1.1: Tender <items>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasLot
+<https://theybuyforyou.eu/ontology/ocds/hasLot> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                rdfs:range <https://theybuyforyou.eu/ontology/ocds/Lot> ;
+                                                rdfs:isDefinedBy "OCDS schema v1.1: Lots extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasLotValue
+<https://theybuyforyou.eu/ontology/ocds/hasLotValue> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Lot> ;
+                                                     rdfs:range <https://theybuyforyou.eu/ontology/ocds/Value> ;
+                                                     rdfs:isDefinedBy "OCDS schema v1.1: Lots extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue
+<https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                              rdfs:range <https://theybuyforyou.eu/ontology/ocds/Value> ;
+                                                              rdfs:isDefinedBy "OCDS schema v1.1: Tender <value>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasMilestone
+<https://theybuyforyou.eu/ontology/ocds/hasMilestone> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain [ rdf:type owl:Class ;
+                                                                    owl:unionOf ( <https://theybuyforyou.eu/ontology/ocds/Contract>
+                                                                                  <https://theybuyforyou.eu/ontology/ocds/Implementation>
+                                                                                  <https://theybuyforyou.eu/ontology/ocds/Plan>
+                                                                                  <https://theybuyforyou.eu/ontology/ocds/Tender>
+                                                                                )
+                                                                  ] ;
+                                                      rdfs:range <https://theybuyforyou.eu/ontology/ocds/Milestone> ;
+                                                      rdfs:isDefinedBy "OCDS schema v1.1: Plan, Tender, Contract, Implementation <milestones>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue
+<https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                              rdfs:range <https://theybuyforyou.eu/ontology/ocds/Value> ;
+                                                              rdfs:isDefinedBy "OCDS schema v1.1: Tender <minValue>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasPlan
+<https://theybuyforyou.eu/ontology/ocds/hasPlan> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> ;
+                                                 rdfs:range <https://theybuyforyou.eu/ontology/ocds/Plan> ;
+                                                 rdfs:isDefinedBy "OCDS schema v1.1." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasReceivedBid
+<https://theybuyforyou.eu/ontology/ocds/hasReceivedBid> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                        rdfs:range <https://theybuyforyou.eu/ontology/ocds/Bid> ;
+                                                        rdfs:isDefinedBy "OCDS schema v1.1: Bids statistics extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain [ rdf:type owl:Class ;
+                                                                         owl:unionOf ( <https://theybuyforyou.eu/ontology/ocds/Item>
+                                                                                       <https://theybuyforyou.eu/ontology/ocds/Lot>
+                                                                                     )
+                                                                       ] ;
+                                                           rdfs:range <https://theybuyforyou.eu/ontology/ocds/Enquiry> ;
+                                                           rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedFrameworkProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedFrameworkProcess> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedParentProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedParentProcess> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:subPropertyOf <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedPlanningProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedPlanningProcess> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:subPropertyOf <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedPriorProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedPriorProcess> rdf:type owl:ObjectProperty ;
+                                                                rdfs:subPropertyOf <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> ;
+                                                           rdfs:range <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> ;
+                                                           rdfs:isDefinedBy "OCDS schema v1.1: Contract <relatedProcesses>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedRenewalProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedRenewalProcess> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:subPropertyOf <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedReplacementProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedReplacementProcess> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedSubContract
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedSubContract> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedUnsuccessfulProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedUnsuccessfulProcess> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:subPropertyOf <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasRequirement
+<https://theybuyforyou.eu/ontology/ocds/hasRequirement> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                        rdfs:range <https://theybuyforyou.eu/ontology/ocds/Requirement> ;
+                                                        rdfs:isDefinedBy "OCDS schema v1.1: Requirements extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasReservedValue
+<https://theybuyforyou.eu/ontology/ocds/hasReservedValue> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Budget> ;
+                                                          rdfs:range <https://theybuyforyou.eu/ontology/ocds/Value> ;
+                                                          rdfs:isDefinedBy "OCDS schema v1.1: Budget <amount>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasSubmittedBid
+<https://theybuyforyou.eu/ontology/ocds/hasSubmittedBid> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Organisation> ;
+                                                         rdfs:range <https://theybuyforyou.eu/ontology/ocds/Bid> ;
+                                                         rdfs:isDefinedBy "OCDS schema v1.1: Bid statistics extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasTender
+<https://theybuyforyou.eu/ontology/ocds/hasTender> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> ;
+                                                   rdfs:range <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                   rdfs:isDefinedBy "OCDS schema v1.1." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod
+<https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                         rdfs:range <https://theybuyforyou.eu/ontology/ocds/Period> ;
+                                                         rdfs:isDefinedBy "OCDS schema v1.1: Tender <tenderPeriod>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasTransaction
+<https://theybuyforyou.eu/ontology/ocds/hasTransaction> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Implementation> ;
+                                                        rdfs:range <https://theybuyforyou.eu/ontology/ocds/Transaction> ;
+                                                        rdfs:isDefinedBy "OCDS schema v1.1: Implementation <transactions>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasTransactionValue
+<https://theybuyforyou.eu/ontology/ocds/hasTransactionValue> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Transaction> ;
+                                                             rdfs:range <https://theybuyforyou.eu/ontology/ocds/Value> ;
+                                                             rdfs:isDefinedBy "OCDS schema v1.1: Transaction <value>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/isBuyerFor
+<https://theybuyforyou.eu/ontology/ocds/isBuyerFor> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Organisation> ;
+                                                    rdfs:range [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( <https://theybuyforyou.eu/ontology/ocds/Contract>
+                                                                               <https://theybuyforyou.eu/ontology/ocds/ContractingProcess>
+                                                                             )
+                                                               ] ;
+                                                    rdfs:isDefinedBy "OCDS schema v1.1: Multiple buyers - contract level extension." ,
+                                                                     "OCDS schema v1.1: Release <buyer>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/isFundedBy
+<https://theybuyforyou.eu/ontology/ocds/isFundedBy> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> ;
+                                                    rdfs:range <https://theybuyforyou.eu/ontology/ocds/Project> ;
+                                                    rdfs:isDefinedBy "OCDS schema v1.1." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/isIssuedForAward
+<https://theybuyforyou.eu/ontology/ocds/isIssuedForAward> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Contract> ;
+                                                          rdfs:range <https://theybuyforyou.eu/ontology/ocds/Award> ;
+                                                          rdfs:isDefinedBy "OCDS schema v1.1: Contract <awardID>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/isIssuedForTender
+<https://theybuyforyou.eu/ontology/ocds/isIssuedForTender> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Award> ;
+                                                           rdfs:range <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                           rdfs:isDefinedBy "OCDS schema v1.1." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/isPayeeFor
+<https://theybuyforyou.eu/ontology/ocds/isPayeeFor> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Organisation> ;
+                                                    rdfs:range <https://theybuyforyou.eu/ontology/ocds/Transaction> ;
+                                                    rdfs:isDefinedBy "OCDS schema v1.1: Transaction <payee>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/isPayerFor
+<https://theybuyforyou.eu/ontology/ocds/isPayerFor> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Organisation> ;
+                                                    rdfs:range <https://theybuyforyou.eu/ontology/ocds/Transaction> ;
+                                                    rdfs:isDefinedBy "OCDS schema v1.1: Transaction <payer>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor
+<https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Organisation> ;
+                                                              rdfs:range <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                              rdfs:isDefinedBy "OCDS schema v1.1: Tender <procuringEntity>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/isRelatedToLot
+<https://theybuyforyou.eu/ontology/ocds/isRelatedToLot> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain [ rdf:type owl:Class ;
+                                                                      owl:unionOf ( <https://theybuyforyou.eu/ontology/ocds/Award>
+                                                                                    <https://theybuyforyou.eu/ontology/ocds/Document>
+                                                                                    <https://theybuyforyou.eu/ontology/ocds/Item>
+                                                                                    <https://theybuyforyou.eu/ontology/ocds/Milestone>
+                                                                                  )
+                                                                    ] ;
+                                                        rdfs:range <https://theybuyforyou.eu/ontology/ocds/Lot> ;
+                                                        rdfs:isDefinedBy "OCDS schema v1.1: Lots extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/isSignatoryForContract
+<https://theybuyforyou.eu/ontology/ocds/isSignatoryForContract> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Organisation> ;
+                                                                rdfs:range <https://theybuyforyou.eu/ontology/ocds/Contract> ;
+                                                                rdfs:isDefinedBy "OCDS schema v1.1: Signatories extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/isSupplierFor
+<https://theybuyforyou.eu/ontology/ocds/isSupplierFor> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Organisation> ;
+                                                       rdfs:range [ rdf:type owl:Class ;
+                                                                    owl:unionOf ( <https://theybuyforyou.eu/ontology/ocds/Award>
+                                                                                  <https://theybuyforyou.eu/ontology/ocds/Contract>
+                                                                                )
+                                                                  ] ;
+                                                       rdfs:isDefinedBy "OCDS schema v1.1:  Contract suppliers extension." ,
+                                                                        "OCDS schema v1.1: Award <suppliers>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/isTendererFor
+<https://theybuyforyou.eu/ontology/ocds/isTendererFor> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Organisation> ;
+                                                       rdfs:range <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                       rdfs:isDefinedBy "OCDS schema v1.1: Tender <tenderers>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/playsRoleIn
+<https://theybuyforyou.eu/ontology/ocds/playsRoleIn> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Organisation> ;
+                                                     rdfs:range <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> ;
+                                                     rdfs:isDefinedBy "OCDS schema v1.1: Organization <roles>." .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
+                                       rdfs:range xsd:string ;
+                                       rdfs:comment "Use in OCDS ontology: Budget, Tender, Award, Contract, Amendment, Document, Item, Milestone, ContractingProcess, Enquiry, Requirement." ;
+                                       rdfs:isDefinedBy "http://purl.org/dc/terms/description" .
+
+
+###  http://purl.org/dc/terms/format
+<http://purl.org/dc/terms/format> rdf:type owl:DatatypeProperty ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:isDefinedBy "Use in OCDS ontology: Document." ,
+                                                   "http://purl.org/dc/terms/format" ,
+                                                   "https://www.iana.org/assignments/media-types/media-types.xhtml" .
+
+
+###  http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> rdf:type owl:DatatypeProperty ;
+                                    rdfs:range xsd:string ;
+                                    rdfs:isDefinedBy "Use in OCDS ontology: Document." ,
+                                                     "http://purl.org/dc/terms/language" .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
+                                 rdfs:range xsd:string ;
+                                 rdfs:comment "Use in OCDS ontology: Project, Tender, Award, Contract, Document, Milestone, ContractingProcess, Enquiry." ;
+                                 rdfs:isDefinedBy "http://purl.org/dc/terms/title" .
+
+
+###  http://schema.org/URL
+<http://schema.org/URL> rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Use in OCDS ontology: ContactPoint, Document." ;
+                        rdfs:isDefinedBy "https://schema.org/URL" .
+
+
+###  http://schema.org/addressCountry
+<http://schema.org/addressCountry> rdf:type owl:DatatypeProperty ;
+                                   rdfs:range xsd:string ;
+                                   rdfs:comment "Use in OCDS ontology: Address." ;
+                                   rdfs:isDefinedBy "OCDS schema v1.1: Address <countryName>." ,
+                                                    "http://schema.org/addressCountry" .
+
+
+###  http://schema.org/addressLocality
+<http://schema.org/addressLocality> rdf:type owl:DatatypeProperty ;
+                                    rdfs:range xsd:string ;
+                                    rdfs:comment "Use in OCDS ontology: Address." ;
+                                    rdfs:isDefinedBy "OCDS schema v1.1: Address <locality>." ,
+                                                     "http://schema.org/addressLocality" .
+
+
+###  http://schema.org/email
+<http://schema.org/email> rdf:type owl:DatatypeProperty ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "OCDS schema v1.1: ContactPoint <email>." ,
+                                       "Use in OCDS ontology: ContactPoint." ;
+                          rdfs:isDefinedBy "http://schema.org/email" .
+
+
+###  http://schema.org/faxNumber
+<http://schema.org/faxNumber> rdf:type owl:DatatypeProperty ;
+                              rdfs:range xsd:string ;
+                              rdfs:isDefinedBy "OCDS schema v1.1: ContactPoint <faxNumber>." ,
+                                               "Use in OCDS ontology: ContactPoint." ,
+                                               "http://schema.org/faxNumber" .
+
+
+###  http://schema.org/name
+<http://schema.org/name> rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Use in OCDS ontology: Organization, ContactPoint, Author." ;
+                         rdfs:isDefinedBy "https://schema.org/name" .
+
+
+###  http://schema.org/postalCode
+<http://schema.org/postalCode> rdf:type owl:DatatypeProperty ;
+                               rdfs:range xsd:string ;
+                               rdfs:comment "Use in OCDS ontology: Address." ;
+                               rdfs:isDefinedBy "OCDS schema v1.1: Address <postalCode>." ,
+                                                "http://schema.org/postalCode" .
+
+
+###  http://schema.org/streetAddress
+<http://schema.org/streetAddress> rdf:type owl:DatatypeProperty ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:comment "Use in OCDS ontology: Address." ;
+                                  rdfs:isDefinedBy "OCDS schema v1.1: Address <streetAddress>." ,
+                                                   "http://schema.org/streetAddress" .
+
+
+###  http://schema.org/telephone
+<http://schema.org/telephone> rdf:type owl:DatatypeProperty ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "OCDS schema v1.1: ContactPoint <telephone>." ,
+                                           "Use in OCDS ontology: ContactPoint." ;
+                              rdfs:isDefinedBy "http://schema.org/telephone" .
+
+
+###  http://www.w3.org/ns/org#identifier
+<http://www.w3.org/ns/org#identifier> rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#notation> ;
+                                      rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Organisation> ;
+                                      rdfs:comment "Many different national and international identifier schemes are available from other vocabularies. The ORG ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value. Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for skos:notation of which this property is a specialization." ;
+                                      rdfs:isDefinedBy "OCDS schema v1.1: Parties <identifier>, i.e., Primary identifier." ,
+                                                       "https://www.w3.org/TR/vocab-org/#org:identifier" .
+
+
+###  http://xmlns.com/foaf/0.1/firstName
+<http://xmlns.com/foaf/0.1/firstName> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/firstName" .
+
+
+###  http://xmlns.com/foaf/0.1/lastName
+<http://xmlns.com/foaf/0.1/lastName> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                                     rdfs:range xsd:string ;
+                                     rdfs:isDefinedBy "http://xmlns.com/foaf/0.1/lastName" .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/URI
+<https://theybuyforyou.eu/ontology/ocds/URI> rdf:type owl:DatatypeProperty ;
+                                             rdfs:range xsd:anyURI ;
+                                             rdfs:comment "Use in OCDS ontology: Organization, Budget, Transaction." ;
+                                             rdfs:isDefinedBy "OCDS schema v1.1." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/additionalIdentifier
+<https://theybuyforyou.eu/ontology/ocds/additionalIdentifier> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#notation> ;
+                                                              rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Organisation> ;
+                                                              rdfs:comment "Similar to https://www.w3.org/TR/vocab-org/#org:identifier" ,
+                                                                           "The particular identifier scheme should be indicated by the datatype of the identifier value. Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for skos:notation of which this property is a specialization." ;
+                                                              rdfs:isDefinedBy "OCDS schema v1.1: Parties <additionalIdentifier>, i.e., Additional identifier." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/additionalItemClassification
+<https://theybuyforyou.eu/ontology/ocds/additionalItemClassification> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Item> ;
+                                                                      rdfs:range xsd:string ;
+                                                                      rdfs:isDefinedBy "OCDS schema v1.1: Item <additionalClassification>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/additionalProcurementCategory
+<https://theybuyforyou.eu/ontology/ocds/additionalProcurementCategory> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                                       rdfs:range xsd:string ;
+                                                                       rdfs:isDefinedBy "OCDS schema v1.1: Tender <additionalProcurementCategories>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/amendmentDate
+<https://theybuyforyou.eu/ontology/ocds/amendmentDate> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Amendment> ;
+                                                       rdfs:range xsd:dateTime ;
+                                                       rdfs:isDefinedBy "OCDS schema v1.1: Amendment <date>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/amendmentId
+<https://theybuyforyou.eu/ontology/ocds/amendmentId> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Amendment> ;
+                                                     rdfs:range xsd:string ;
+                                                     rdfs:isDefinedBy "OCDS schema v1.1: Amendment <id>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/amendmentRationale
+<https://theybuyforyou.eu/ontology/ocds/amendmentRationale> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Amendment> ;
+                                                            rdfs:range xsd:string ;
+                                                            rdfs:isDefinedBy "OCDS schema v1.1: Amendment <rationale>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/authorId
+<https://theybuyforyou.eu/ontology/ocds/authorId> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/awardCriteria
+<https://theybuyforyou.eu/ontology/ocds/awardCriteria> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                       rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                    owl:oneOf [ rdf:type rdf:List ;
+                                                                                rdf:first "bestProposal" ;
+                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                           rdf:first "bestValueToGovernment" ;
+                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                      rdf:first "costOnly" ;
+                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                 rdf:first "lowestCost" ;
+                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                            rdf:first "priceOnly" ;
+                                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                       rdf:first "qualityOnly" ;
+                                                                                                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                  rdf:first "ratedCriteria" ;
+                                                                                                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                             rdf:first "singleBidOnly" ;
+                                                                                                                                                             rdf:rest rdf:nil
+                                                                                                                                                           ]
+                                                                                                                                                ]
+                                                                                                                                     ]
+                                                                                                                          ]
+                                                                                                               ]
+                                                                                                    ]
+                                                                                         ]
+                                                                              ]
+                                                                  ] ;
+                                                       rdfs:isDefinedBy "OCDS schema v1.1: Tender <awardCriteria>." ,
+                                                                        "http://standard.open-contracting.org/latest/en/schema/codelists/#award-criteria" .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/awardCriteriaDetails
+<https://theybuyforyou.eu/ontology/ocds/awardCriteriaDetails> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                              rdfs:range xsd:string ;
+                                                              rdfs:isDefinedBy "OCDS schema v1.1: Tender <awardCriteriaDetails>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/awardDate
+<https://theybuyforyou.eu/ontology/ocds/awardDate> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Award> ;
+                                                   rdfs:range xsd:string ;
+                                                   rdfs:isDefinedBy "OCDS schema v1.1: Award <date>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/awardId
+<https://theybuyforyou.eu/ontology/ocds/awardId> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Award> ;
+                                                 rdfs:range xsd:string ;
+                                                 rdfs:isDefinedBy "OCDS schema v1.1: Award <awardId>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/awardStatus
+<https://theybuyforyou.eu/ontology/ocds/awardStatus> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Award> ;
+                                                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                  owl:oneOf [ rdf:type rdf:List ;
+                                                                              rdf:first "active" ;
+                                                                              rdf:rest [ rdf:type rdf:List ;
+                                                                                         rdf:first "cancelled" ;
+                                                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                                                    rdf:first "pending" ;
+                                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                                               rdf:first "unsuccessful" ;
+                                                                                                               rdf:rest rdf:nil
+                                                                                                             ]
+                                                                                                  ]
+                                                                                       ]
+                                                                            ]
+                                                                ] ;
+                                                     rdfs:isDefinedBy "OCDS schema v1.1: Award <awardStatus>." ,
+                                                                      "http://standard.open-contracting.org/latest/en/schema/codelists/#award-status" .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/bidDate
+<https://theybuyforyou.eu/ontology/ocds/bidDate> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Bid> ;
+                                                 rdfs:range xsd:dateTime ;
+                                                 rdfs:isDefinedBy "OCDS schema v1.1: Bids extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/bidId
+<https://theybuyforyou.eu/ontology/ocds/bidId> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Bid> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:isDefinedBy "OCDS schema v1.1: Bids extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/bidStatus
+<https://theybuyforyou.eu/ontology/ocds/bidStatus> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Bid> ;
+                                                   rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                owl:oneOf [ rdf:type rdf:List ;
+                                                                            rdf:first "disqualified" ;
+                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                       rdf:first "invited" ;
+                                                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                                                  rdf:first "pending" ;
+                                                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                                                             rdf:first "valid" ;
+                                                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                                                        rdf:first "withdawn" ;
+                                                                                                                        rdf:rest rdf:nil
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                              ] ;
+                                                   rdfs:isDefinedBy "OCDS schema v1.1: Bids extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/budgetId
+<https://theybuyforyou.eu/ontology/ocds/budgetId> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Budget> ;
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:isDefinedBy "OCDS ontology: Budget <id>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/contractId
+<https://theybuyforyou.eu/ontology/ocds/contractId> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Contract> ;
+                                                    rdfs:range xsd:string ;
+                                                    rdfs:isDefinedBy "OCDS schema v1.1: Contract <id>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/contractStatus
+<https://theybuyforyou.eu/ontology/ocds/contractStatus> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Contract> ;
+                                                        rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                     owl:oneOf [ rdf:type rdf:List ;
+                                                                                 rdf:first "active" ;
+                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                            rdf:first "cancelled" ;
+                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                       rdf:first "pending" ;
+                                                                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                                                                  rdf:first "terminated" ;
+                                                                                                                  rdf:rest rdf:nil
+                                                                                                                ]
+                                                                                                     ]
+                                                                                          ]
+                                                                               ]
+                                                                   ] ;
+                                                        rdfs:isDefinedBy "OCDS schema v1.1: Contract <status>." ,
+                                                                         "http://standard.open-contracting.org/latest/en/schema/codelists/#contract-status" .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/dateContractSigned
+<https://theybuyforyou.eu/ontology/ocds/dateContractSigned> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Contract> ;
+                                                            rdfs:range xsd:dateTime ;
+                                                            rdfs:isDefinedBy "OCDS schema v1.1: Contract <dateSigned>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/dateDocumentModified
+<https://theybuyforyou.eu/ontology/ocds/dateDocumentModified> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Document> ;
+                                                              rdfs:range xsd:dateTime ;
+                                                              rdfs:isDefinedBy "OCDS schema v1.1: Document <dateModified>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/dateDocumentPublished
+<https://theybuyforyou.eu/ontology/ocds/dateDocumentPublished> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Document> ;
+                                                               rdfs:range xsd:dateTime ;
+                                                               rdfs:isDefinedBy "OCDS schema v1.1: Document <datePublished>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/dateEnquiryAnswered
+<https://theybuyforyou.eu/ontology/ocds/dateEnquiryAnswered> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Enquiry> ;
+                                                             rdfs:range xsd:dateTime ;
+                                                             rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/discussionThreadId
+<https://theybuyforyou.eu/ontology/ocds/discussionThreadId> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Discussion> ;
+                                                            rdfs:range xsd:string ;
+                                                            rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/documentId
+<https://theybuyforyou.eu/ontology/ocds/documentId> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Document> ;
+                                                    rdfs:range xsd:string ;
+                                                    rdfs:isDefinedBy "OCDS schema v1.1: Document <id>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/documentType
+<https://theybuyforyou.eu/ontology/ocds/documentType> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Document> ;
+                                                      rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                   owl:oneOf [ rdf:type rdf:List ;
+                                                                               rdf:first "assetAndLiabilityAssessment" ;
+                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                          rdf:first "awardNotice" ;
+                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                     rdf:first "bidders" ;
+                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                rdf:first "biddingDocuments" ;
+                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                           rdf:first "billOfQuantity" ;
+                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                      rdf:first "cancellationDetails" ;
+                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                 rdf:first "clarifications" ;
+                                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                            rdf:first "complaints" ;
+                                                                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                       rdf:first "completionCertificate" ;
+                                                                                                                                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                  rdf:first "conflictOfInterest" ;
+                                                                                                                                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                             rdf:first "contractAnnexe" ;
+                                                                                                                                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                        rdf:first "contractArrangements" ;
+                                                                                                                                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                   rdf:first "contractDraft" ;
+                                                                                                                                                                                                                   rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                              rdf:first "contractGuarantees" ;
+                                                                                                                                                                                                                              rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                         rdf:first "contractNotice" ;
+                                                                                                                                                                                                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                    rdf:first "contractSchedule" ;
+                                                                                                                                                                                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                               rdf:first "contractSigned" ;
+                                                                                                                                                                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                          rdf:first "contractSummary" ;
+                                                                                                                                                                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                     rdf:first "debarments" ;
+                                                                                                                                                                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                rdf:first "eligibilityCriteria" ;
+                                                                                                                                                                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                           rdf:first "environmentalImpact" ;
+                                                                                                                                                                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                      rdf:first "evaluationCriteria" ;
+                                                                                                                                                                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                 rdf:first "evaluationReports" ;
+                                                                                                                                                                                                                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                            rdf:first "feasibilityStudy" ;
+                                                                                                                                                                                                                                                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                       rdf:first "finalAudit" ;
+                                                                                                                                                                                                                                                                                                                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                                  rdf:first "financialProgressReport" ;
+                                                                                                                                                                                                                                                                                                                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                                             rdf:first "hearingNotice" ;
+                                                                                                                                                                                                                                                                                                                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                                                        rdf:first "illustration" ;
+                                                                                                                                                                                                                                                                                                                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                                                                   rdf:first "marketStudies" ;
+                                                                                                                                                                                                                                                                                                                                                                                                   rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                                                                              rdf:first "needsAssessment" ;
+                                                                                                                                                                                                                                                                                                                                                                                                              rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                                                                                         rdf:first "physicalProgressReport" ;
+                                                                                                                                                                                                                                                                                                                                                                                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                    rdf:first "procurementPlan" ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                               rdf:first "projectPlan" ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                          rdf:first "riskProvisions" ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     rdf:first "shortlistedFirms" ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                rdf:first "subContract" ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           rdf:first "submissionDocuments" ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      rdf:first "technicalSpecifications" ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 rdf:first "tenderNotice" ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            rdf:first "winningBid" ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                                                                                                                                                                                             ]
+                                                                                                                                                                                                                                                                                                                                                                                                                                  ]
+                                                                                                                                                                                                                                                                                                                                                                                                                       ]
+                                                                                                                                                                                                                                                                                                                                                                                                            ]
+                                                                                                                                                                                                                                                                                                                                                                                                 ]
+                                                                                                                                                                                                                                                                                                                                                                                      ]
+                                                                                                                                                                                                                                                                                                                                                                           ]
+                                                                                                                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                                                                                                                     ]
+                                                                                                                                                                                                                                                                                                                                          ]
+                                                                                                                                                                                                                                                                                                                               ]
+                                                                                                                                                                                                                                                                                                                    ]
+                                                                                                                                                                                                                                                                                                         ]
+                                                                                                                                                                                                                                                                                              ]
+                                                                                                                                                                                                                                                                                   ]
+                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                             ]
+                                                                                                                                                                                                                                                  ]
+                                                                                                                                                                                                                                       ]
+                                                                                                                                                                                                                            ]
+                                                                                                                                                                                                                 ]
+                                                                                                                                                                                                      ]
+                                                                                                                                                                                           ]
+                                                                                                                                                                                ]
+                                                                                                                                                                     ]
+                                                                                                                                                          ]
+                                                                                                                                               ]
+                                                                                                                                    ]
+                                                                                                                         ]
+                                                                                                              ]
+                                                                                                   ]
+                                                                                        ]
+                                                                             ]
+                                                                 ] ;
+                                                      rdfs:isDefinedBy "OCDS schema: Document <documentType>." ,
+                                                                       "http://standard.open-contracting.org/latest/en/schema/codelists/#document-type" .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/eligibilityCriteria
+<https://theybuyforyou.eu/ontology/ocds/eligibilityCriteria> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                             rdfs:range xsd:string ;
+                                                             rdfs:isDefinedBy "OCDS schema v1.1: Tender <eligibilityCriteria>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/enquiry
+<https://theybuyforyou.eu/ontology/ocds/enquiry> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                 rdfs:range xsd:boolean ;
+                                                 rdfs:isDefinedBy "OCDS schema v1.1: Tender <hasEnquiries>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/enquiryAnswer
+<https://theybuyforyou.eu/ontology/ocds/enquiryAnswer> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Enquiry> ;
+                                                       rdfs:range xsd:string ;
+                                                       rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/enquiryDate
+<https://theybuyforyou.eu/ontology/ocds/enquiryDate> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Enquiry> ;
+                                                     rdfs:range xsd:dateTime ;
+                                                     rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/enquiryId
+<https://theybuyforyou.eu/ontology/ocds/enquiryId> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Enquiry> ;
+                                                   rdfs:range xsd:string ;
+                                                   rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/itemId
+<https://theybuyforyou.eu/ontology/ocds/itemId> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Item> ;
+                                                rdfs:range xsd:string ;
+                                                rdfs:isDefinedBy "OCDS schema v1.1: Item <id>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/legalName
+<https://theybuyforyou.eu/ontology/ocds/legalName> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:range xsd:string ;
+                                                   rdfs:comment "Use in OCDS ontology: Organization." ;
+                                                   rdfs:isDefinedBy "OCDS schema v1.1: Identifier <legalName>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/lotId
+<https://theybuyforyou.eu/ontology/ocds/lotId> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Lot> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:isDefinedBy "OCDS schema v1.1: Lots extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/lotStatus
+<https://theybuyforyou.eu/ontology/ocds/lotStatus> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Lot> ;
+                                                   rdfs:range xsd:string ;
+                                                   rdfs:isDefinedBy "OCDS schema v1.1: Lots extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/mainProcurementCategory
+<https://theybuyforyou.eu/ontology/ocds/mainProcurementCategory> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                                 rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                              owl:oneOf [ rdf:type rdf:List ;
+                                                                                          rdf:first "goods" ;
+                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                     rdf:first "services" ;
+                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                rdf:first "works" ;
+                                                                                                                rdf:rest rdf:nil
+                                                                                                              ]
+                                                                                                   ]
+                                                                                        ]
+                                                                            ] ;
+                                                                 rdfs:isDefinedBy "OCDS schema v1.1: Tender <mainProcurementCategory>." ,
+                                                                                  "http://standard.open-contracting.org/latest/en/schema/codelists/#procurement-category" .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/mileStoneStatus
+<https://theybuyforyou.eu/ontology/ocds/mileStoneStatus> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Milestone> ;
+                                                         rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                      owl:oneOf [ rdf:type rdf:List ;
+                                                                                  rdf:first "met" ;
+                                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                                             rdf:first "notMet" ;
+                                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                                        rdf:first "partiallyMet" ;
+                                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                                   rdf:first "scheduled" ;
+                                                                                                                   rdf:rest rdf:nil
+                                                                                                                 ]
+                                                                                                      ]
+                                                                                           ]
+                                                                                ]
+                                                                    ] ;
+                                                         rdfs:isDefinedBy "OCDS schema v1.1: Milestone <status>." ,
+                                                                          "http://standard.open-contracting.org/latest/en/schema/codelists/#milestone-status" .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/milestoneCode
+<https://theybuyforyou.eu/ontology/ocds/milestoneCode> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Milestone> ;
+                                                       rdfs:range xsd:string ;
+                                                       rdfs:isDefinedBy "OCDS schema v1.1: Milestone <code>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/milestoneDateMet
+<https://theybuyforyou.eu/ontology/ocds/milestoneDateMet> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Milestone> ;
+                                                          rdfs:range xsd:dateTime ;
+                                                          rdfs:isDefinedBy "OCDS schema v1.1: Milestone <dateMet>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/milestoneDateModified
+<https://theybuyforyou.eu/ontology/ocds/milestoneDateModified> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Milestone> ;
+                                                               rdfs:range xsd:dateTime ;
+                                                               rdfs:isDefinedBy "OCDS schema v1.1: Milestone <dateModified>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/milestoneDueDate
+<https://theybuyforyou.eu/ontology/ocds/milestoneDueDate> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Milestone> ;
+                                                          rdfs:range xsd:dateTime ;
+                                                          rdfs:isDefinedBy "OCDS schema v1.1: Milestone <dueDate>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/milestoneId
+<https://theybuyforyou.eu/ontology/ocds/milestoneId> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Milestone> ;
+                                                     rdfs:range xsd:string ;
+                                                     rdfs:isDefinedBy "OCDS schema v1.1: Milestone <id>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/milestoneType
+<https://theybuyforyou.eu/ontology/ocds/milestoneType> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Milestone> ;
+                                                       rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                    owl:oneOf [ rdf:type rdf:List ;
+                                                                                rdf:first "approval" ;
+                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                           rdf:first "assessment" ;
+                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                      rdf:first "delivery" ;
+                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                 rdf:first "engagement" ;
+                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                            rdf:first "financing" ;
+                                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                       rdf:first "preProcurement" ;
+                                                                                                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                  rdf:first "reporting" ;
+                                                                                                                                                  rdf:rest rdf:nil
+                                                                                                                                                ]
+                                                                                                                                     ]
+                                                                                                                          ]
+                                                                                                               ]
+                                                                                                    ]
+                                                                                         ]
+                                                                              ]
+                                                                  ] ;
+                                                       rdfs:isDefinedBy "OCDS schema v1.1: Milestone <type>." ,
+                                                                        "http://standard.open-contracting.org/latest/en/schema/codelists/#milestone-type" .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/numberOfTenderers
+<https://theybuyforyou.eu/ontology/ocds/numberOfTenderers> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                           rdfs:range xsd:integer ;
+                                                           rdfs:isDefinedBy "OCDS schema v1.1: Tender <numberOfTenderers>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/periodDurationInDays
+<https://theybuyforyou.eu/ontology/ocds/periodDurationInDays> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Period> ;
+                                                              rdfs:range xsd:integer ;
+                                                              rdfs:isDefinedBy "OCDS schema v1.1: Period <durationInDays>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/periodEndDate
+<https://theybuyforyou.eu/ontology/ocds/periodEndDate> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Period> ;
+                                                       rdfs:range xsd:dateTime ;
+                                                       rdfs:isDefinedBy "OCDS schema v1.1: periodEndDate." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/periodMaxExtentDate
+<https://theybuyforyou.eu/ontology/ocds/periodMaxExtentDate> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Period> ;
+                                                             rdfs:range xsd:dateTime ;
+                                                             rdfs:isDefinedBy "OCDS schema v1.1: Period <maxExtentDate>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/periodStartDate
+<https://theybuyforyou.eu/ontology/ocds/periodStartDate> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Period> ;
+                                                         rdfs:range xsd:dateTime ;
+                                                         rdfs:isDefinedBy "OCDS schema v1.1: Period <startDate>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/procurementMethod
+<https://theybuyforyou.eu/ontology/ocds/procurementMethod> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                           rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                        owl:oneOf [ rdf:type rdf:List ;
+                                                                                    rdf:first "direct" ;
+                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                               rdf:first "limited" ;
+                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                          rdf:first "open" ;
+                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                     rdf:first "selective" ;
+                                                                                                                     rdf:rest rdf:nil
+                                                                                                                   ]
+                                                                                                        ]
+                                                                                             ]
+                                                                                  ]
+                                                                      ] ;
+                                                           rdfs:isDefinedBy "OCDS schema v1.1: Tender <procurementMethod>." ,
+                                                                            "http://standard.open-contracting.org/latest/en/schema/codelists/#method" .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/procurementMethodDetails
+<https://theybuyforyou.eu/ontology/ocds/procurementMethodDetails> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                                  rdfs:range xsd:string ;
+                                                                  rdfs:isDefinedBy "OCDS schema v1.1: Tender <procurementMethodDetails>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/procurementMethodRationale
+<https://theybuyforyou.eu/ontology/ocds/procurementMethodRationale> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                                    rdfs:range xsd:string ;
+                                                                    rdfs:isDefinedBy "OCDS schema v1.1: Tender <procurementMethodRationale>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/procurementRationale
+<https://theybuyforyou.eu/ontology/ocds/procurementRationale> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Plan> ;
+                                                              rdfs:range xsd:string ;
+                                                              rdfs:isDefinedBy "OCDS schema v1.1: Plan <rationale>" .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/projectId
+<https://theybuyforyou.eu/ontology/ocds/projectId> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Project> ;
+                                                   rdfs:range xsd:string ;
+                                                   rdfs:isDefinedBy "OCDS schema v1.1: Budget <projectId>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/quantity
+<https://theybuyforyou.eu/ontology/ocds/quantity> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:range xsd:integer ;
+                                                  rdfs:comment "Use in OCDS ontology: Item." ;
+                                                  rdfs:isDefinedBy "OCDS schema: Item <qauntity>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/region
+<https://theybuyforyou.eu/ontology/ocds/region> rdf:type owl:DatatypeProperty ;
+                                                rdfs:range xsd:string ;
+                                                rdfs:comment "Use in OCDS ontology: Address." ;
+                                                rdfs:isDefinedBy "OCDS schema: Address <region>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/requirementId
+<https://theybuyforyou.eu/ontology/ocds/requirementId> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Requirement> ;
+                                                       rdfs:range xsd:string .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/submissionMethod
+<https://theybuyforyou.eu/ontology/ocds/submissionMethod> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                          rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                       owl:oneOf [ rdf:type rdf:List ;
+                                                                                   rdf:first "electronicAuction" ;
+                                                                                   rdf:rest [ rdf:type rdf:List ;
+                                                                                              rdf:first "electronicSubmission" ;
+                                                                                              rdf:rest [ rdf:type rdf:List ;
+                                                                                                         rdf:first "inPerson" ;
+                                                                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                                                                    rdf:first "written" ;
+                                                                                                                    rdf:rest rdf:nil
+                                                                                                                  ]
+                                                                                                       ]
+                                                                                            ]
+                                                                                 ]
+                                                                     ] ;
+                                                          rdfs:isDefinedBy "OCDS schema v1.1: Tender <submissionMethod>." ,
+                                                                           "http://standard.open-contracting.org/latest/en/schema/codelists/#submission-method" .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/submissionMethodDetails
+<https://theybuyforyou.eu/ontology/ocds/submissionMethodDetails> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                                 rdfs:range xsd:string ;
+                                                                 rdfs:isDefinedBy "OCDS schema v1.1: Tender <submissionMethodDetails>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/tenderId
+<https://theybuyforyou.eu/ontology/ocds/tenderId> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:isDefinedBy "OCDS schema v1.1: Tender <id>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/tenderStatus
+<https://theybuyforyou.eu/ontology/ocds/tenderStatus> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Tender> ;
+                                                      rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                   owl:oneOf [ rdf:type rdf:List ;
+                                                                               rdf:first "active" ;
+                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                          rdf:first "cancelled" ;
+                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                     rdf:first "complete" ;
+                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                rdf:first "planned" ;
+                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                           rdf:first "planning" ;
+                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                      rdf:first "unsuccessful" ;
+                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                 rdf:first "withdrawn" ;
+                                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                                               ]
+                                                                                                                                    ]
+                                                                                                                         ]
+                                                                                                              ]
+                                                                                                   ]
+                                                                                        ]
+                                                                             ]
+                                                                 ] ;
+                                                      rdfs:isDefinedBy "OCDS schema v1.1: Tender <status>." ,
+                                                                       "http://standard.open-contracting.org/latest/en/schema/codelists/#tender-status" .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/transactionDataSource
+<https://theybuyforyou.eu/ontology/ocds/transactionDataSource> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Transaction> ;
+                                                               rdfs:range xsd:string ;
+                                                               rdfs:isDefinedBy "OCDS schema v1.1: Transaction <source>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/transactionDate
+<https://theybuyforyou.eu/ontology/ocds/transactionDate> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Transaction> ;
+                                                         rdfs:range xsd:dateTime ;
+                                                         rdfs:isDefinedBy "OCDS schema v1.1: Transaction <date>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/transactionId
+<https://theybuyforyou.eu/ontology/ocds/transactionId> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Transaction> ;
+                                                       rdfs:range xsd:string ;
+                                                       rdfs:isDefinedBy "OCDS schema v1.1: Transaction <id>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/unit
+<https://theybuyforyou.eu/ontology/ocds/unit> rdf:type owl:DatatypeProperty ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:comment "Use in OCDS ontology: Item." ;
+                                              rdfs:isDefinedBy "OCDS schema: Item <unit>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/valueAmount
+<https://theybuyforyou.eu/ontology/ocds/valueAmount> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Value> ;
+                                                     rdfs:range xsd:decimal ;
+                                                     rdfs:isDefinedBy "OCDS schema v1.1: Value <amount>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/valueCurrency
+<https://theybuyforyou.eu/ontology/ocds/valueCurrency> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <https://theybuyforyou.eu/ontology/ocds/Value> ;
+                                                       rdfs:range xsd:string ;
+                                                       rdfs:isDefinedBy "OCDS schema v1.1: Value <currency>." .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
+                                   rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." ,
+                                                    "http://xmlns.com/foaf/0.1/Person" .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Address
+<https://theybuyforyou.eu/ontology/ocds/Address> rdf:type owl:Class ;
+                                                 rdfs:comment "Uses also the following data type properties: addressCountry, addressLocality, postalCode, streeAddress, region." ;
+                                                 rdfs:isDefinedBy "OCDS schema v1.1: Adress." ;
+                                                 <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/addressCountry> ,
+                                                                                                           <http://schema.org/addressLocality> ,
+                                                                                                           <http://schema.org/postalCode> ,
+                                                                                                           <http://schema.org/streetAddress> ,
+                                                                                                           <https://theybuyforyou.eu/ontology/ocds/region> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Amendment
+<https://theybuyforyou.eu/ontology/ocds/Amendment> rdf:type owl:Class ;
+                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasAmendment> ;
+                                                                     owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Amendment>
+                                                                   ] ;
+                                                   rdfs:comment "Uses also the following data type properties: description." ;
+                                                   rdfs:isDefinedBy "OCDS schema v1.1: Amendment." ;
+                                                   <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Award
+<https://theybuyforyou.eu/ontology/ocds/Award> rdf:type owl:Class ;
+                                               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasAmendment> ;
+                                                                 owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Amendment>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasAwardValue> ;
+                                                                 owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Value>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod> ;
+                                                                 owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Period>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasAwardedItem> ;
+                                                                 owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Item>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasDocument> ;
+                                                                 owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Document>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <https://theybuyforyou.eu/ontology/ocds/isIssuedForTender> ;
+                                                                 owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Tender>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <https://theybuyforyou.eu/ontology/ocds/isRelatedToLot> ;
+                                                                 owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Lot>
+                                                               ] ;
+                                               rdfs:comment "Uses also the following data type properties: title, description." ;
+                                               rdfs:isDefinedBy "OCDS schema v1.1: Award." ;
+                                               <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> ,
+                                                                                                         <http://purl.org/dc/terms/title> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Bid
+<https://theybuyforyou.eu/ontology/ocds/Bid> rdf:type owl:Class ;
+                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasBidValue> ;
+                                                               owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Value>
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasDocument> ;
+                                                               owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Document>
+                                                             ] ;
+                                             rdfs:isDefinedBy "OCDS schema v1.1: Bid statistics extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Budget
+<https://theybuyforyou.eu/ontology/ocds/Budget> rdf:type owl:Class ;
+                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasReservedValue> ;
+                                                                  owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Value>
+                                                                ] ;
+                                                rdfs:comment "Uses also the following data type properties: description, URI." ;
+                                                rdfs:isDefinedBy "OCDS schema v1.1: Budget." ;
+                                                <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> ,
+                                                                                                          <https://theybuyforyou.eu/ontology/ocds/URI> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/ContactPoint
+<https://theybuyforyou.eu/ontology/ocds/ContactPoint> rdf:type owl:Class ;
+                                                      rdfs:comment "Uses also the following data type properties: faxNumber, telephone, email, addressCountry, postalCode, addressLocality, streetAddress, name, url." ;
+                                                      rdfs:isDefinedBy "OCDS schema v1.1: ContactPoint." ;
+                                                      <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/URL> ,
+                                                                                                                <http://schema.org/addressCountry> ,
+                                                                                                                <http://schema.org/addressLocality> ,
+                                                                                                                <http://schema.org/email> ,
+                                                                                                                <http://schema.org/faxNumber> ,
+                                                                                                                <http://schema.org/name> ,
+                                                                                                                <http://schema.org/postalCode> ,
+                                                                                                                <http://schema.org/streetAddress> ,
+                                                                                                                <http://schema.org/telephone> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Contract
+<https://theybuyforyou.eu/ontology/ocds/Contract> rdf:type owl:Class ;
+                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://theybuyforyou.eu/ontology/ocds/extendsContract> ;
+                                                                    owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Contract>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasAmendment> ;
+                                                                    owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Amendment>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasContractImplementation> ;
+                                                                    owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Implementation>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasContractPeriod> ;
+                                                                    owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Period>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasContractValue> ;
+                                                                    owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Value>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasContractedItem> ;
+                                                                    owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Item>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasDocument> ;
+                                                                    owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Document>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasMilestone> ;
+                                                                    owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Milestone>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://theybuyforyou.eu/ontology/ocds/isIssuedForAward> ;
+                                                                    owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Award>
+                                                                  ] ;
+                                                  rdfs:comment "Uses also the following data type properties: title, description." ;
+                                                  rdfs:isDefinedBy "OCDS schema v1.1: Contact." ;
+                                                  <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> ,
+                                                                                                            <http://purl.org/dc/terms/title> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/ContractingProcess
+<https://theybuyforyou.eu/ontology/ocds/ContractingProcess> rdf:type owl:Class ;
+                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasAward> ;
+                                                                              owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Award>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasContract> ;
+                                                                              owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Contract>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasPlan> ;
+                                                                              owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Plan>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> ;
+                                                                              owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/ContractingProcess>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasTender> ;
+                                                                              owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Tender>
+                                                                            ] ;
+                                                            rdfs:comment "Title and description properties is extracted from the following extension: OCDS v1.1. Process level title and description." ,
+                                                                         "Uses also the following data type properties: title, description." ;
+                                                            rdfs:isDefinedBy "OCDS schema v1.1." ;
+                                                            <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> ,
+                                                                                                                      <http://purl.org/dc/terms/title> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Discussion
+<https://theybuyforyou.eu/ontology/ocds/Discussion> rdf:type owl:Class ;
+                                                    rdfs:comment "OCDS schema v1.1: Enquiries extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Document
+<https://theybuyforyou.eu/ontology/ocds/Document> rdf:type owl:Class ;
+                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://theybuyforyou.eu/ontology/ocds/isRelatedToLot> ;
+                                                                    owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Lot>
+                                                                  ] ;
+                                                  rdfs:comment "Uses also the following data type properties: language, format, title, description, url." ;
+                                                  rdfs:isDefinedBy "OCDS schema v1.1: Document." ;
+                                                  <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> ,
+                                                                                                            <http://purl.org/dc/terms/format> ,
+                                                                                                            <http://purl.org/dc/terms/language> ,
+                                                                                                            <http://purl.org/dc/terms/title> ,
+                                                                                                            <http://schema.org/URL> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Enquiry
+<https://theybuyforyou.eu/ontology/ocds/Enquiry> rdf:type owl:Class ;
+                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasEnquiryAuthor> ;
+                                                                   owl:allValuesFrom <http://xmlns.com/foaf/0.1/Person>
+                                                                 ] ;
+                                                 rdfs:comment "Uses also the following data type properties: title, description." ;
+                                                 rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." ;
+                                                 <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> ,
+                                                                                                           <http://purl.org/dc/terms/title> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Implementation
+<https://theybuyforyou.eu/ontology/ocds/Implementation> rdf:type owl:Class ;
+                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasDocument> ;
+                                                                          owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Document>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasMilestone> ;
+                                                                          owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Milestone>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasTransaction> ;
+                                                                          owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Transaction>
+                                                                        ] ;
+                                                        rdfs:isDefinedBy "OCDS schema v1.1: Implementation." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Item
+<https://theybuyforyou.eu/ontology/ocds/Item> rdf:type owl:Class ;
+                                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification> ;
+                                                                owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasClassification> ;
+                                                                owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry> ;
+                                                                owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Enquiry>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://theybuyforyou.eu/ontology/ocds/isRelatedToLot> ;
+                                                                owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Lot>
+                                                              ] ;
+                                              rdfs:comment "Uses also following data properties: quantity, unit, description." ;
+                                              rdfs:isDefinedBy "OCDS schema v1.1: Item." ;
+                                              <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> ,
+                                                                                                        <https://theybuyforyou.eu/ontology/ocds/quantity> ,
+                                                                                                        <https://theybuyforyou.eu/ontology/ocds/unit> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Lot
+<https://theybuyforyou.eu/ontology/ocds/Lot> rdf:type owl:Class ;
+                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasLotValue> ;
+                                                               owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Value>
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry> ;
+                                                               owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Enquiry>
+                                                             ] ;
+                                             rdfs:comment "Uses also the following data types: title, description." ;
+                                             rdfs:isDefinedBy "OCDS schema v1.1: Lots extension." ;
+                                             <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> ,
+                                                                                                       <http://purl.org/dc/terms/title> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Milestone
+<https://theybuyforyou.eu/ontology/ocds/Milestone> rdf:type owl:Class ;
+                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasDocument> ;
+                                                                     owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Document>
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://theybuyforyou.eu/ontology/ocds/isRelatedToLot> ;
+                                                                     owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Lot>
+                                                                   ] ;
+                                                   rdfs:comment "Uses also the following data type properties: title, description." ;
+                                                   rdfs:isDefinedBy "OCDS schema v1.1: Milestone." ;
+                                                   <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> ,
+                                                                                                             <http://purl.org/dc/terms/title> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Organisation
+<https://theybuyforyou.eu/ontology/ocds/Organisation> rdf:type owl:Class ;
+                                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasAdditionalContactPoint> ;
+                                                                        owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/ContactPoint>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasAddress> ;
+                                                                        owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Address>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasContactPoint> ;
+                                                                        owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/ContactPoint>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasSubmittedBid> ;
+                                                                        owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Bid>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://theybuyforyou.eu/ontology/ocds/isBuyerFor> ;
+                                                                        owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                            owl:unionOf ( <https://theybuyforyou.eu/ontology/ocds/Contract>
+                                                                                                          <https://theybuyforyou.eu/ontology/ocds/ContractingProcess>
+                                                                                                        )
+                                                                                          ]
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://theybuyforyou.eu/ontology/ocds/isPayeeFor> ;
+                                                                        owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Transaction>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://theybuyforyou.eu/ontology/ocds/isPayerFor> ;
+                                                                        owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Transaction>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor> ;
+                                                                        owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Tender>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://theybuyforyou.eu/ontology/ocds/isSignatoryForContract> ;
+                                                                        owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Contract>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://theybuyforyou.eu/ontology/ocds/isSupplierFor> ;
+                                                                        owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                            owl:unionOf ( <https://theybuyforyou.eu/ontology/ocds/Award>
+                                                                                                          <https://theybuyforyou.eu/ontology/ocds/Contract>
+                                                                                                        )
+                                                                                          ]
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://theybuyforyou.eu/ontology/ocds/isTendererFor> ;
+                                                                        owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Tender>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://theybuyforyou.eu/ontology/ocds/playsRoleIn> ;
+                                                                        owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/ContractingProcess>
+                                                                      ] ;
+                                                      rdfs:comment "Uses also the following data type properties: legalName, name, URI." ;
+                                                      rdfs:isDefinedBy "OCDS schema v1.1: Organization." ;
+                                                      <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/name> ,
+                                                                                                                <https://theybuyforyou.eu/ontology/ocds/URI> ,
+                                                                                                                <https://theybuyforyou.eu/ontology/ocds/legalName> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Period
+<https://theybuyforyou.eu/ontology/ocds/Period> rdf:type owl:Class ;
+                                                rdfs:isDefinedBy "OCDS schema v1.1: Period." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Plan
+<https://theybuyforyou.eu/ontology/ocds/Plan> rdf:type owl:Class ;
+                                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasBudget> ;
+                                                                owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Budget>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasDocument> ;
+                                                                owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Document>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasMilestone> ;
+                                                                owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Milestone>
+                                                              ] ;
+                                              rdfs:isDefinedBy "OCDS schema v1.1: Planning." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Project
+<https://theybuyforyou.eu/ontology/ocds/Project> rdf:type owl:Class ;
+                                                 rdfs:comment "Uses also the following data type properties: title." ;
+                                                 rdfs:isDefinedBy "OCDS schema v1.1: Budget." ;
+                                                 <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/title> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Requirement
+<https://theybuyforyou.eu/ontology/ocds/Requirement> rdf:type owl:Class ;
+                                                     rdfs:comment "Uses also the following data type properties: description." ;
+                                                     rdfs:isDefinedBy "OCDS schema v1.1: Requirements extension." ;
+                                                     <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Tender
+<https://theybuyforyou.eu/ontology/ocds/Tender> rdf:type owl:Class ;
+                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasAmendment> ;
+                                                                  owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Amendment>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod> ;
+                                                                  owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Period>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasDocument> ;
+                                                                  owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Document>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasEnquiry> ;
+                                                                  owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Enquiry>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasEnquiryPeriod> ;
+                                                                  owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Period>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod> ;
+                                                                  owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Period>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured> ;
+                                                                  owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Item>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasLot> ;
+                                                                  owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Lot>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue> ;
+                                                                  owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Value>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasMilestone> ;
+                                                                  owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Milestone>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue> ;
+                                                                  owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Value>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasReceivedBid> ;
+                                                                  owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Bid>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasRequirement> ;
+                                                                  owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Requirement>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod> ;
+                                                                  owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Period>
+                                                                ] ;
+                                                rdfs:comment "Uses also the following data type properties: title, description." ;
+                                                rdfs:isDefinedBy "OCDS schema v1.1: Tender." ;
+                                                <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> ,
+                                                                                                          <http://purl.org/dc/terms/title> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Transaction
+<https://theybuyforyou.eu/ontology/ocds/Transaction> rdf:type owl:Class ;
+                                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://theybuyforyou.eu/ontology/ocds/hasTransactionValue> ;
+                                                                       owl:allValuesFrom <https://theybuyforyou.eu/ontology/ocds/Value>
+                                                                     ] ;
+                                                     rdfs:comment "Uses also the following data type properties: URI." ;
+                                                     rdfs:isDefinedBy "OCDS schema v1.1: Transaction." ;
+                                                     <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <https://theybuyforyou.eu/ontology/ocds/URI> .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/Value
+<https://theybuyforyou.eu/ontology/ocds/Value> rdf:type owl:Class ;
+                                               rdfs:isDefinedBy "OCDS schema v1.1: Value." .
+
+
+###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

@@ -1,0 +1,2456 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+    }, {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Contract"
+    }, {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid103",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "active"
+    }, {
+      "@value" : "cancelled"
+    }, {
+      "@value" : "complete"
+    }, {
+      "@value" : "planned"
+    }, {
+      "@value" : "planning"
+    }, {
+      "@value" : "unsuccessful"
+    }, {
+      "@value" : "withdrawn"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Contract"
+    }, {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Implementation"
+    }, {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Plan"
+    }, {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid111",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Amendment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAmendment"
+  } ]
+}, {
+  "@id" : "_:genid112",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Amendment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAmendment"
+  } ]
+}, {
+  "@id" : "_:genid113",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Value"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAwardValue"
+  } ]
+}, {
+  "@id" : "_:genid114",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod"
+  } ]
+}, {
+  "@id" : "_:genid115",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Item"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAwardedItem"
+  } ]
+}, {
+  "@id" : "_:genid116",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Document"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasDocument"
+  } ]
+}, {
+  "@id" : "_:genid117",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/isIssuedForTender"
+  } ]
+}, {
+  "@id" : "_:genid118",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Value"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasReservedValue"
+  } ]
+}, {
+  "@id" : "_:genid119",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Amendment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAmendment"
+  } ]
+}, {
+  "@id" : "_:genid120",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Implementation"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContractImplementation"
+  } ]
+}, {
+  "@id" : "_:genid121",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContractPeriod"
+  } ]
+}, {
+  "@id" : "_:genid122",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Value"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContractValue"
+  } ]
+}, {
+  "@id" : "_:genid123",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Item"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContractedItem"
+  } ]
+}, {
+  "@id" : "_:genid124",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Document"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasDocument"
+  } ]
+}, {
+  "@id" : "_:genid125",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Milestone"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasMilestone"
+  } ]
+}, {
+  "@id" : "_:genid126",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/isIssuedForAward"
+  } ]
+}, {
+  "@id" : "_:genid127",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAward"
+  } ]
+}, {
+  "@id" : "_:genid128",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Contract"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContract"
+  } ]
+}, {
+  "@id" : "_:genid129",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Plan"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasPlan"
+  } ]
+}, {
+  "@id" : "_:genid130",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/ContractingProcess"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"
+  } ]
+}, {
+  "@id" : "_:genid131",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasTender"
+  } ]
+}, {
+  "@id" : "_:genid132",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Document"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasDocument"
+  } ]
+}, {
+  "@id" : "_:genid133",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Milestone"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasMilestone"
+  } ]
+}, {
+  "@id" : "_:genid134",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Transaction"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasTransaction"
+  } ]
+}, {
+  "@id" : "_:genid135",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification"
+  } ]
+}, {
+  "@id" : "_:genid136",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasClassification"
+  } ]
+}, {
+  "@id" : "_:genid137",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Document"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasDocument"
+  } ]
+}, {
+  "@id" : "_:genid138",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Address"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAddress"
+  } ]
+}, {
+  "@id" : "_:genid139",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/ContactPoint"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContactPoint"
+  } ]
+}, {
+  "@id" : "_:genid140",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/ContractingProcess"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/isBuyerFor"
+  } ]
+}, {
+  "@id" : "_:genid141",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Transaction"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/isPayeeFor"
+  } ]
+}, {
+  "@id" : "_:genid142",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Transaction"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/isPayerFor"
+  } ]
+}, {
+  "@id" : "_:genid143",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor"
+  } ]
+}, {
+  "@id" : "_:genid144",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/isSupplierFor"
+  } ]
+}, {
+  "@id" : "_:genid145",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/isTendererFor"
+  } ]
+}, {
+  "@id" : "_:genid146",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/ContractingProcess"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/playsRoleIn"
+  } ]
+}, {
+  "@id" : "_:genid147",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Budget"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasBudget"
+  } ]
+}, {
+  "@id" : "_:genid148",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Document"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasDocument"
+  } ]
+}, {
+  "@id" : "_:genid149",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Milestone"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasMilestone"
+  } ]
+}, {
+  "@id" : "_:genid150",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Amendment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAmendment"
+  } ]
+}, {
+  "@id" : "_:genid151",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod"
+  } ]
+}, {
+  "@id" : "_:genid152",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Document"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasDocument"
+  } ]
+}, {
+  "@id" : "_:genid153",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod"
+  } ]
+}, {
+  "@id" : "_:genid154",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Item"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured"
+  } ]
+}, {
+  "@id" : "_:genid155",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Value"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue"
+  } ]
+}, {
+  "@id" : "_:genid156",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Milestone"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasMilestone"
+  } ]
+}, {
+  "@id" : "_:genid157",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Value"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue"
+  } ]
+}, {
+  "@id" : "_:genid158",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod"
+  } ]
+}, {
+  "@id" : "_:genid159",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Transaction"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasTransactionValue"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "bestProposal"
+    }, {
+      "@value" : "bestValueToGovernment"
+    }, {
+      "@value" : "costOnly"
+    }, {
+      "@value" : "lowestCost"
+    }, {
+      "@value" : "priceOnly"
+    }, {
+      "@value" : "qualityOnly"
+    }, {
+      "@value" : "ratedCriteria"
+    }, {
+      "@value" : "singleBidOnly"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "active"
+    }, {
+      "@value" : "cancelled"
+    }, {
+      "@value" : "pending"
+    }, {
+      "@value" : "unsuccessful"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "active"
+    }, {
+      "@value" : "cancelled"
+    }, {
+      "@value" : "pending"
+    }, {
+      "@value" : "terminated"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "assetAndLiabilityAssessment"
+    }, {
+      "@value" : "awardNotice"
+    }, {
+      "@value" : "bidders"
+    }, {
+      "@value" : "biddingDocuments"
+    }, {
+      "@value" : "billOfQuantity"
+    }, {
+      "@value" : "cancellationDetails"
+    }, {
+      "@value" : "clarifications"
+    }, {
+      "@value" : "complaints"
+    }, {
+      "@value" : "completionCertificate"
+    }, {
+      "@value" : "conflictOfInterest"
+    }, {
+      "@value" : "contractAnnexe"
+    }, {
+      "@value" : "contractArrangements"
+    }, {
+      "@value" : "contractDraft"
+    }, {
+      "@value" : "contractGuarantees"
+    }, {
+      "@value" : "contractNotice"
+    }, {
+      "@value" : "contractSchedule"
+    }, {
+      "@value" : "contractSigned"
+    }, {
+      "@value" : "contractSummary"
+    }, {
+      "@value" : "debarments"
+    }, {
+      "@value" : "eligibilityCriteria"
+    }, {
+      "@value" : "environmentalImpact"
+    }, {
+      "@value" : "evaluationCriteria"
+    }, {
+      "@value" : "evaluationReports"
+    }, {
+      "@value" : "feasibilityStudy"
+    }, {
+      "@value" : "finalAudit"
+    }, {
+      "@value" : "financialProgressReport"
+    }, {
+      "@value" : "hearingNotice"
+    }, {
+      "@value" : "illustration"
+    }, {
+      "@value" : "marketStudies"
+    }, {
+      "@value" : "needsAssessment"
+    }, {
+      "@value" : "physicalProgressReport"
+    }, {
+      "@value" : "procurementPlan"
+    }, {
+      "@value" : "projectPlan"
+    }, {
+      "@value" : "riskProvisions"
+    }, {
+      "@value" : "shortlistedFirms"
+    }, {
+      "@value" : "subContract"
+    }, {
+      "@value" : "submissionDocuments"
+    }, {
+      "@value" : "technicalSpecifications"
+    }, {
+      "@value" : "tenderNotice"
+    }, {
+      "@value" : "winningBid"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+    }, {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Contract"
+    }, {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Implementation"
+    }, {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Plan"
+    }, {
+      "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid76",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "goods"
+    }, {
+      "@value" : "services"
+    }, {
+      "@value" : "works"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid80",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "met"
+    }, {
+      "@value" : "notMet"
+    }, {
+      "@value" : "partiallyMet"
+    }, {
+      "@value" : "scheduled"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid85",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "approval"
+    }, {
+      "@value" : "assessment"
+    }, {
+      "@value" : "delivery"
+    }, {
+      "@value" : "engagement"
+    }, {
+      "@value" : "financing"
+    }, {
+      "@value" : "preProcurement"
+    }, {
+      "@value" : "reporting"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid93",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "direct"
+    }, {
+      "@value" : "limited"
+    }, {
+      "@value" : "open"
+    }, {
+      "@value" : "selective"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid98",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "electronicAuction"
+    }, {
+      "@value" : "electronicSubmission"
+    }, {
+      "@value" : "inPerson"
+    }, {
+      "@value" : "written"
+    } ]
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Use in OCDS ontology: Budget, Tender, Award, Contract, Amendment, Document, Item, Milestone."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://purl.org/dc/terms/description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/format",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "Use in OCDS ontology: Document."
+  }, {
+    "@value" : "http://purl.org/dc/terms/format"
+  }, {
+    "@value" : "https://www.iana.org/assignments/media-types/media-types.xhtml"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "Use in OCDS ontology: Document."
+  }, {
+    "@value" : "http://purl.org/dc/terms/language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Use in OCDS ontology: Project, Tender, Award, Contract, Document, Milestone."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://purl.org/dc/terms/title"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://schema.org/URL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Use in OCDS ontology: ContactPoint, Document."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://schema.org/URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://schema.org/addressCountry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Use in OCDS ontology: Address."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Address <countryName>."
+  }, {
+    "@value" : "http://schema.org/addressCountry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://schema.org/addressLocality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Use in OCDS ontology: Address."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Address <locality>."
+  }, {
+    "@value" : "http://schema.org/addressLocality"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://schema.org/email",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "OCDS schema v1.1: ContactPoint <email>."
+  }, {
+    "@value" : "Use in OCDS ontology: ContactPoint."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://schema.org/email"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://schema.org/faxNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: ContactPoint <faxNumber>."
+  }, {
+    "@value" : "Use in OCDS ontology: ContactPoint."
+  }, {
+    "@value" : "http://schema.org/faxNumber"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://schema.org/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Use in OCDS ontology: Organization, ContactPoint."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://schema.org/name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://schema.org/postalCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Use in OCDS ontology: Address."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Address <postalCode>."
+  }, {
+    "@value" : "http://schema.org/postalCode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://schema.org/streetAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Use in OCDS ontology: Address."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Address <streetAddress>."
+  }, {
+    "@value" : "http://schema.org/streetAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://schema.org/telephone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "OCDS schema v1.1: ContactPoint <telephone>."
+  }, {
+    "@value" : "Use in OCDS ontology: ContactPoint."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://schema.org/telephone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/org#identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Many different national and international identifier schemes are available from other vocabularies. The ORG ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value. Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for skos:notation of which this property is a specialization."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Organisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Parties <identifier>, i.e., Primary identifier."
+  }, {
+    "@value" : "https://www.w3.org/TR/vocab-org/#org:identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#notation"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Address",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Uses also the following data type properties: addressCountry, addressLocality, postalCode, streeAddress, region."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Adress."
+  } ],
+  "https://theybuyforyou.eu/ontology/ocds/usesDataProperty" : [ {
+    "@id" : "http://schema.org/addressCountry"
+  }, {
+    "@id" : "http://schema.org/addressLocality"
+  }, {
+    "@id" : "http://schema.org/postalCode"
+  }, {
+    "@id" : "http://schema.org/streetAddress"
+  }, {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/region"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Amendment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Uses also the following data type properties: description."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Amendment."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid111"
+  } ],
+  "https://theybuyforyou.eu/ontology/ocds/usesDataProperty" : [ {
+    "@id" : "http://purl.org/dc/terms/description"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Award",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Uses also the following data type properties: title, description."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Award."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid112"
+  }, {
+    "@id" : "_:genid113"
+  }, {
+    "@id" : "_:genid114"
+  }, {
+    "@id" : "_:genid115"
+  }, {
+    "@id" : "_:genid116"
+  }, {
+    "@id" : "_:genid117"
+  } ],
+  "https://theybuyforyou.eu/ontology/ocds/usesDataProperty" : [ {
+    "@id" : "http://purl.org/dc/terms/description"
+  }, {
+    "@id" : "http://purl.org/dc/terms/title"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Budget",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Uses also the following data type properties: description, URI."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Budget."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid118"
+  } ],
+  "https://theybuyforyou.eu/ontology/ocds/usesDataProperty" : [ {
+    "@id" : "http://purl.org/dc/terms/description"
+  }, {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/URI"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/ContactPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Uses also the following data type properties: faxNumber, telephone, email, addressCountry, postalCode, addressLocality, streetAddress, name, url."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: ContactPoint."
+  } ],
+  "https://theybuyforyou.eu/ontology/ocds/usesDataProperty" : [ {
+    "@id" : "http://schema.org/URL"
+  }, {
+    "@id" : "http://schema.org/addressCountry"
+  }, {
+    "@id" : "http://schema.org/addressLocality"
+  }, {
+    "@id" : "http://schema.org/email"
+  }, {
+    "@id" : "http://schema.org/faxNumber"
+  }, {
+    "@id" : "http://schema.org/name"
+  }, {
+    "@id" : "http://schema.org/postalCode"
+  }, {
+    "@id" : "http://schema.org/streetAddress"
+  }, {
+    "@id" : "http://schema.org/telephone"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Contract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Uses also the following data type properties: title, description."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Contact."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid119"
+  }, {
+    "@id" : "_:genid120"
+  }, {
+    "@id" : "_:genid121"
+  }, {
+    "@id" : "_:genid122"
+  }, {
+    "@id" : "_:genid123"
+  }, {
+    "@id" : "_:genid124"
+  }, {
+    "@id" : "_:genid125"
+  }, {
+    "@id" : "_:genid126"
+  } ],
+  "https://theybuyforyou.eu/ontology/ocds/usesDataProperty" : [ {
+    "@id" : "http://purl.org/dc/terms/description"
+  }, {
+    "@id" : "http://purl.org/dc/terms/title"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/ContractingProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid127"
+  }, {
+    "@id" : "_:genid128"
+  }, {
+    "@id" : "_:genid129"
+  }, {
+    "@id" : "_:genid130"
+  }, {
+    "@id" : "_:genid131"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Document",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Uses also the following data type properties: language, format, title, description, url."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Document."
+  } ],
+  "https://theybuyforyou.eu/ontology/ocds/usesDataProperty" : [ {
+    "@id" : "http://purl.org/dc/terms/description"
+  }, {
+    "@id" : "http://purl.org/dc/terms/format"
+  }, {
+    "@id" : "http://purl.org/dc/terms/language"
+  }, {
+    "@id" : "http://purl.org/dc/terms/title"
+  }, {
+    "@id" : "http://schema.org/URL"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Implementation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Implementation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid132"
+  }, {
+    "@id" : "_:genid133"
+  }, {
+    "@id" : "_:genid134"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Item",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Uses also following data properties: quantity, unit, description."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Item."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid135"
+  }, {
+    "@id" : "_:genid136"
+  } ],
+  "https://theybuyforyou.eu/ontology/ocds/usesDataProperty" : [ {
+    "@id" : "http://purl.org/dc/terms/description"
+  }, {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/quantity"
+  }, {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/unit"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Milestone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Uses also the following data type properties: title, description."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Milestone."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid137"
+  } ],
+  "https://theybuyforyou.eu/ontology/ocds/usesDataProperty" : [ {
+    "@id" : "http://purl.org/dc/terms/description"
+  }, {
+    "@id" : "http://purl.org/dc/terms/title"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Organisation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Uses also the following data type properties: legalName, name, URI."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Organization."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid138"
+  }, {
+    "@id" : "_:genid139"
+  }, {
+    "@id" : "_:genid140"
+  }, {
+    "@id" : "_:genid141"
+  }, {
+    "@id" : "_:genid142"
+  }, {
+    "@id" : "_:genid143"
+  }, {
+    "@id" : "_:genid144"
+  }, {
+    "@id" : "_:genid145"
+  }, {
+    "@id" : "_:genid146"
+  } ],
+  "https://theybuyforyou.eu/ontology/ocds/usesDataProperty" : [ {
+    "@id" : "http://schema.org/name"
+  }, {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/URI"
+  }, {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/legalName"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Period",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Period."
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Plan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Planning."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid147"
+  }, {
+    "@id" : "_:genid148"
+  }, {
+    "@id" : "_:genid149"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Uses also the following data type properties: title."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Budget."
+  } ],
+  "https://theybuyforyou.eu/ontology/ocds/usesDataProperty" : [ {
+    "@id" : "http://purl.org/dc/terms/title"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Uses also the following data type properties: title, description."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid150"
+  }, {
+    "@id" : "_:genid151"
+  }, {
+    "@id" : "_:genid152"
+  }, {
+    "@id" : "_:genid153"
+  }, {
+    "@id" : "_:genid154"
+  }, {
+    "@id" : "_:genid155"
+  }, {
+    "@id" : "_:genid156"
+  }, {
+    "@id" : "_:genid157"
+  }, {
+    "@id" : "_:genid158"
+  } ],
+  "https://theybuyforyou.eu/ontology/ocds/usesDataProperty" : [ {
+    "@id" : "http://purl.org/dc/terms/description"
+  }, {
+    "@id" : "http://purl.org/dc/terms/title"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Transaction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Uses also the following data type properties: URI."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Transaction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid159"
+  } ],
+  "https://theybuyforyou.eu/ontology/ocds/usesDataProperty" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/URI"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/URI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Use in OCDS ontology: Organization, Budget, Transaction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/Value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Value."
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/additionalIdentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Similar to https://www.w3.org/TR/vocab-org/#org:identifier"
+  }, {
+    "@value" : "The particular identifier scheme should be indicated by the datatype of the identifier value. Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for skos:notation of which this property is a specialization."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Organisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Parties <additionalIdentifier>, i.e., Additional identifier."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#notation"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/additionalItemClassification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Item <additionalClassification>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/additionalProcurementCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <additionalProcurementCategories>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/amendmentDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Amendment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Amendment <date>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/amendmentId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Amendment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Amendment <id>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/amendmentRationale",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Amendment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Amendment <rationale>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/awardCriteria",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <awardCriteria>."
+  }, {
+    "@value" : "http://standard.open-contracting.org/latest/en/schema/codelists/#award-criteria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid16"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/awardCriteriaDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <awardCriteriaDetails>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/awardDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Award <date>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/awardId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Award <awardId>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/awardStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Award <awardStatus>."
+  }, {
+    "@value" : "http://standard.open-contracting.org/latest/en/schema/codelists/#award-status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid25"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/budgetId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Budget"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS ontology: Budget <id>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/contractId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Contract <id>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/contractStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Contract <status>."
+  }, {
+    "@value" : "http://standard.open-contracting.org/latest/en/schema/codelists/#contract-status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid30"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/dateContractSigned",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Contract <dateSigned>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/dateDocumentModified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Document"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Document <dateModified>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/dateDocumentPublished",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Document"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Document <datePublished>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/documentId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Document"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Document <id>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/documentType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Document"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema: Document <documentType>."
+  }, {
+    "@value" : "http://standard.open-contracting.org/latest/en/schema/codelists/#document-type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid35"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/eligibilityCriteria",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <eligibilityCriteria>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/enquiry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <hasEnquiries>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Item <aditionalClassification>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Organisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Organization <address>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Address"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAmendment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender, Award, Contract <amendments>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Amendment"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAward",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/ContractingProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <awardPeriod>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAwardValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Award <value>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Value"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Award <contractPeriod>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasAwardedItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Award <item>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Item"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasBudget",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Plan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Plan <budget>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Budget"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasClassification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Item <classification>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContactPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Organisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Organization <contactPoint>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/ContactPoint"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/ContractingProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Contract"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContractImplementation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Contract <implementation>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Implementation"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContractPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Contract <period>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContractValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Contract <value>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Value"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasContractedItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Contract <items>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Item"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasDocument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Plan, Tender, Award, Contract, Implementation <documents>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Document"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasEnquiryPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <enquiryPeriod>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <contractPeriod>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <items>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Item"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <value>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Value"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasMilestone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid11"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Plan, Tender, Contract, Implementation <milestones>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Milestone"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <minValue>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Value"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasPlan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/ContractingProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Plan"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedFrameworkProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedParentProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedPlanningProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedPriorProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/ContractingProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Contract <relatedProcesses>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/ContractingProcess"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedRenewalProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedReplacementProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedSubContract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedUnsuccessfulProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasReservedValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Budget"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Budget <amount>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Value"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasTender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/ContractingProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <tenderPeriod>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasTransaction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Implementation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Implementation <transactions>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Transaction"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/hasTransactionValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Transaction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Transaction <value>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Value"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/isBuyerFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Organisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Release <buyer>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/ContractingProcess"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/isFundedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/ContractingProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Project"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/isIssuedForAward",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Contract <awardID>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/isIssuedForTender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/isPayeeFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Organisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Transaction <payee>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Transaction"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/isPayerFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Organisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Transaction <payer>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Transaction"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Organisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <procuringEntity>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/isSupplierFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Organisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Award <suppliers>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Award"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/isTendererFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Organisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <tenderers>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/itemId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Item <id>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/legalName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Use in OCDS ontology: Organization."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Identifier <legalName>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/mainProcurementCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <mainProcurementCategory>."
+  }, {
+    "@value" : "http://standard.open-contracting.org/latest/en/schema/codelists/#procurement-category"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid76"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/mileStoneStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Milestone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Milestone <status>."
+  }, {
+    "@value" : "http://standard.open-contracting.org/latest/en/schema/codelists/#milestone-status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid80"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/milestoneCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Milestone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Milestone <code>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/milestoneDateMet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Milestone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Milestone <dateMet>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/milestoneDateModified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Milestone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Milestone <dateModified>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/milestoneDueDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Milestone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Milestone <dueDate>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/milestoneId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Milestone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Milestone <id>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/milestoneType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Milestone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Milestone <type>."
+  }, {
+    "@value" : "http://standard.open-contracting.org/latest/en/schema/codelists/#milestone-type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid85"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/numberOfTenderers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <numberOfTenderers>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/periodDurationInDays",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Period <durationInDays>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/periodEndDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: periodEndDate."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/periodMaxExtentDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Period <maxExtentDate>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/periodStartDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Period"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Period <startDate>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/playsRoleIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Organisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Organization <roles>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/ContractingProcess"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/procurementMethod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <procurementMethod>."
+  }, {
+    "@value" : "http://standard.open-contracting.org/latest/en/schema/codelists/#method"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid93"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/procurementMethodDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <procurementMethodDetails>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/procurementMethodRationale",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <procurementMethodRationale>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/procurementRationale",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Plan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Plan <rationale>"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/projectId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Budget <projectId>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/quantity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Use in OCDS ontology: Item."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema: Item <qauntity>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/region",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Use in OCDS ontology: Address."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema: Address <region>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/submissionMethod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <submissionMethod>."
+  }, {
+    "@value" : "http://standard.open-contracting.org/latest/en/schema/codelists/#submission-method"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid98"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/submissionMethodDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <submissionMethodDetails>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/tenderId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <id>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/tenderStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Tender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Tender <status>."
+  }, {
+    "@value" : "http://standard.open-contracting.org/latest/en/schema/codelists/#tender-status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid103"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/transactionDataSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Transaction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Transaction <source>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/transactionDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Transaction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Transaction <date>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/transactionId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Transaction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Transaction <id>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Use in OCDS ontology: Item."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema: Item <unit>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/usesDataProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/valueAmount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Value <amount>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "https://theybuyforyou.eu/ontology/ocds/valueCurrency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://theybuyforyou.eu/ontology/ocds/Value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OCDS schema v1.1: Value <currency>."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+} ]

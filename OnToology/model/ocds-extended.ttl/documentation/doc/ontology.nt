@@ -1,0 +1,1739 @@
+<http://www.sintef.no/ontology/ocds/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.sintef.no/ontology/ocds/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# https://theybuyforyou.eu/ontology/ocds/usesDataProperty
+<https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://theybuyforyou.eu/ontology/ocds/belongsToDiscussion
+<https://theybuyforyou.eu/ontology/ocds/belongsToDiscussion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/belongsToDiscussion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Enquiry> .
+<https://theybuyforyou.eu/ontology/ocds/belongsToDiscussion> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Discussion> .
+<https://theybuyforyou.eu/ontology/ocds/belongsToDiscussion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Enquiries extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/extendsContract
+<https://theybuyforyou.eu/ontology/ocds/extendsContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/extendsContract> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+<https://theybuyforyou.eu/ontology/ocds/extendsContract> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+<https://theybuyforyou.eu/ontology/ocds/extendsContract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Contract extensions via supplementary contract." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification
+<https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Item> .
+<https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Item <aditionalClassification>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasAdditionalContactPoint
+<https://theybuyforyou.eu/ontology/ocds/hasAdditionalContactPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasAdditionalContactPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Organisation> .
+<https://theybuyforyou.eu/ontology/ocds/hasAdditionalContactPoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/ContactPoint> .
+<https://theybuyforyou.eu/ontology/ocds/hasAdditionalContactPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "OCDS schema v1.1: Additional Contact Points extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasAddress
+<https://theybuyforyou.eu/ontology/ocds/hasAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Organisation> .
+<https://theybuyforyou.eu/ontology/ocds/hasAddress> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Address> .
+<https://theybuyforyou.eu/ontology/ocds/hasAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Organization <address>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasAmendment
+<https://theybuyforyou.eu/ontology/ocds/hasAmendment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasAmendment> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Award> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/hasAmendment> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Amendment> .
+<https://theybuyforyou.eu/ontology/ocds/hasAmendment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender, Award, Contract <amendments>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasAward
+<https://theybuyforyou.eu/ontology/ocds/hasAward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasAward> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> .
+<https://theybuyforyou.eu/ontology/ocds/hasAward> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Award> .
+<https://theybuyforyou.eu/ontology/ocds/hasAward> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod
+<https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <awardPeriod>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasAwardValue
+<https://theybuyforyou.eu/ontology/ocds/hasAwardValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasAwardValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Award> .
+<https://theybuyforyou.eu/ontology/ocds/hasAwardValue> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/hasAwardValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Award <value>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod
+<https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Award> .
+<https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Award <contractPeriod>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasAwardedItem
+<https://theybuyforyou.eu/ontology/ocds/hasAwardedItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasAwardedItem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Award> .
+<https://theybuyforyou.eu/ontology/ocds/hasAwardedItem> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Item> .
+<https://theybuyforyou.eu/ontology/ocds/hasAwardedItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Award <item>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasBidValue
+<https://theybuyforyou.eu/ontology/ocds/hasBidValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasBidValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Bid> .
+<https://theybuyforyou.eu/ontology/ocds/hasBidValue> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/hasBidValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Bid statistics extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasBudget
+<https://theybuyforyou.eu/ontology/ocds/hasBudget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasBudget> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Plan> .
+<https://theybuyforyou.eu/ontology/ocds/hasBudget> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Budget> .
+<https://theybuyforyou.eu/ontology/ocds/hasBudget> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Plan <budget>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasClassification
+<https://theybuyforyou.eu/ontology/ocds/hasClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasClassification> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Item> .
+<https://theybuyforyou.eu/ontology/ocds/hasClassification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://theybuyforyou.eu/ontology/ocds/hasClassification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Item <classification>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasContactPoint
+<https://theybuyforyou.eu/ontology/ocds/hasContactPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasContactPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Organisation> .
+<https://theybuyforyou.eu/ontology/ocds/hasContactPoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/ContactPoint> .
+<https://theybuyforyou.eu/ontology/ocds/hasContactPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Parties <contactPoint>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasContract
+<https://theybuyforyou.eu/ontology/ocds/hasContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasContract> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> .
+<https://theybuyforyou.eu/ontology/ocds/hasContract> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+<https://theybuyforyou.eu/ontology/ocds/hasContract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasContractImplementation
+<https://theybuyforyou.eu/ontology/ocds/hasContractImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasContractImplementation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+<https://theybuyforyou.eu/ontology/ocds/hasContractImplementation> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Implementation> .
+<https://theybuyforyou.eu/ontology/ocds/hasContractImplementation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Contract <implementation>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasContractPeriod
+<https://theybuyforyou.eu/ontology/ocds/hasContractPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasContractPeriod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+<https://theybuyforyou.eu/ontology/ocds/hasContractPeriod> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/hasContractPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Contract <period>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasContractValue
+<https://theybuyforyou.eu/ontology/ocds/hasContractValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasContractValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+<https://theybuyforyou.eu/ontology/ocds/hasContractValue> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/hasContractValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Contract <value>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasContractedItem
+<https://theybuyforyou.eu/ontology/ocds/hasContractedItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasContractedItem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+<https://theybuyforyou.eu/ontology/ocds/hasContractedItem> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Item> .
+<https://theybuyforyou.eu/ontology/ocds/hasContractedItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Contract <items>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasDocument
+<https://theybuyforyou.eu/ontology/ocds/hasDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasDocument> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Award> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Bid> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Implementation> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Milestone> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Plan> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/hasDocument> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Document> .
+<https://theybuyforyou.eu/ontology/ocds/hasDocument> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Milestone documents extension." .
+<https://theybuyforyou.eu/ontology/ocds/hasDocument> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Plan, Tender, Award, Contract, Implementation, Bid <documents>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasEnquiry
+<https://theybuyforyou.eu/ontology/ocds/hasEnquiry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasEnquiry> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/hasEnquiry> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Enquiry> .
+<https://theybuyforyou.eu/ontology/ocds/hasEnquiry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Enquiries extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasEnquiryAuthor
+<https://theybuyforyou.eu/ontology/ocds/hasEnquiryAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasEnquiryAuthor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Enquiry> .
+<https://theybuyforyou.eu/ontology/ocds/hasEnquiryAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<https://theybuyforyou.eu/ontology/ocds/hasEnquiryAuthor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Enquiries extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasEnquiryPeriod
+<https://theybuyforyou.eu/ontology/ocds/hasEnquiryPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasEnquiryPeriod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/hasEnquiryPeriod> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/hasEnquiryPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <enquiryPeriod>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod
+<https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <contractPeriod>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured
+<https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Item> .
+<https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <items>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasLot
+<https://theybuyforyou.eu/ontology/ocds/hasLot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasLot> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/hasLot> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Lot> .
+<https://theybuyforyou.eu/ontology/ocds/hasLot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Lots extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasLotValue
+<https://theybuyforyou.eu/ontology/ocds/hasLotValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasLotValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Lot> .
+<https://theybuyforyou.eu/ontology/ocds/hasLotValue> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/hasLotValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Lots extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue
+<https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <value>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasMilestone
+<https://theybuyforyou.eu/ontology/ocds/hasMilestone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasMilestone> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Implementation> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Plan> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/hasMilestone> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Milestone> .
+<https://theybuyforyou.eu/ontology/ocds/hasMilestone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Plan, Tender, Contract, Implementation <milestones>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue
+<https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <minValue>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasPlan
+<https://theybuyforyou.eu/ontology/ocds/hasPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasPlan> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> .
+<https://theybuyforyou.eu/ontology/ocds/hasPlan> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Plan> .
+<https://theybuyforyou.eu/ontology/ocds/hasPlan> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasReceivedBid
+<https://theybuyforyou.eu/ontology/ocds/hasReceivedBid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasReceivedBid> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/hasReceivedBid> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Bid> .
+<https://theybuyforyou.eu/ontology/ocds/hasReceivedBid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Bids statistics extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid18 <http://www.w3.org/2002/07/owl#unionOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Item> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Lot> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Enquiry> .
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Enquiries extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasRelatedFrameworkProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedFrameworkProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedFrameworkProcess> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasRelatedParentProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedParentProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedParentProcess> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasRelatedPlanningProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedPlanningProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedPlanningProcess> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasRelatedPriorProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedPriorProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedPriorProcess> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> .
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> .
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Contract <relatedProcesses>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasRelatedRenewalProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedRenewalProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedRenewalProcess> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasRelatedReplacementProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedReplacementProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedReplacementProcess> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasRelatedSubContract
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedSubContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedSubContract> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasRelatedUnsuccessfulProcess
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedUnsuccessfulProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasRelatedUnsuccessfulProcess> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasRequirement
+<https://theybuyforyou.eu/ontology/ocds/hasRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasRequirement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/hasRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Requirement> .
+<https://theybuyforyou.eu/ontology/ocds/hasRequirement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Requirements extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasReservedValue
+<https://theybuyforyou.eu/ontology/ocds/hasReservedValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasReservedValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Budget> .
+<https://theybuyforyou.eu/ontology/ocds/hasReservedValue> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/hasReservedValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Budget <amount>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasSubmittedBid
+<https://theybuyforyou.eu/ontology/ocds/hasSubmittedBid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasSubmittedBid> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Organisation> .
+<https://theybuyforyou.eu/ontology/ocds/hasSubmittedBid> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Bid> .
+<https://theybuyforyou.eu/ontology/ocds/hasSubmittedBid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Bid statistics extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasTender
+<https://theybuyforyou.eu/ontology/ocds/hasTender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasTender> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> .
+<https://theybuyforyou.eu/ontology/ocds/hasTender> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/hasTender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod
+<https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <tenderPeriod>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasTransaction
+<https://theybuyforyou.eu/ontology/ocds/hasTransaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasTransaction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Implementation> .
+<https://theybuyforyou.eu/ontology/ocds/hasTransaction> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Transaction> .
+<https://theybuyforyou.eu/ontology/ocds/hasTransaction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Implementation <transactions>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/hasTransactionValue
+<https://theybuyforyou.eu/ontology/ocds/hasTransactionValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/hasTransactionValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Transaction> .
+<https://theybuyforyou.eu/ontology/ocds/hasTransactionValue> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/hasTransactionValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Transaction <value>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/isBuyerFor
+<https://theybuyforyou.eu/ontology/ocds/isBuyerFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/isBuyerFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Organisation> .
+<https://theybuyforyou.eu/ontology/ocds/isBuyerFor> <http://www.w3.org/2000/01/rdf-schema#range> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid21 <http://www.w3.org/2002/07/owl#unionOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/isBuyerFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Multiple buyers - contract level extension." .
+<https://theybuyforyou.eu/ontology/ocds/isBuyerFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Release <buyer>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/isFundedBy
+<https://theybuyforyou.eu/ontology/ocds/isFundedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/isFundedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> .
+<https://theybuyforyou.eu/ontology/ocds/isFundedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Project> .
+<https://theybuyforyou.eu/ontology/ocds/isFundedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/isIssuedForAward
+<https://theybuyforyou.eu/ontology/ocds/isIssuedForAward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/isIssuedForAward> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+<https://theybuyforyou.eu/ontology/ocds/isIssuedForAward> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Award> .
+<https://theybuyforyou.eu/ontology/ocds/isIssuedForAward> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Contract <awardID>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/isIssuedForTender
+<https://theybuyforyou.eu/ontology/ocds/isIssuedForTender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/isIssuedForTender> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Award> .
+<https://theybuyforyou.eu/ontology/ocds/isIssuedForTender> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/isIssuedForTender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/isPayeeFor
+<https://theybuyforyou.eu/ontology/ocds/isPayeeFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/isPayeeFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Organisation> .
+<https://theybuyforyou.eu/ontology/ocds/isPayeeFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Transaction> .
+<https://theybuyforyou.eu/ontology/ocds/isPayeeFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Transaction <payee>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/isPayerFor
+<https://theybuyforyou.eu/ontology/ocds/isPayerFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/isPayerFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Organisation> .
+<https://theybuyforyou.eu/ontology/ocds/isPayerFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Transaction> .
+<https://theybuyforyou.eu/ontology/ocds/isPayerFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Transaction <payer>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor
+<https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Organisation> .
+<https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <procuringEntity>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/isRelatedToLot
+<https://theybuyforyou.eu/ontology/ocds/isRelatedToLot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/isRelatedToLot> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid24 <http://www.w3.org/2002/07/owl#unionOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Award> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Document> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Item> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Milestone> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/isRelatedToLot> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Lot> .
+<https://theybuyforyou.eu/ontology/ocds/isRelatedToLot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Lots extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/isSignatoryForContract
+<https://theybuyforyou.eu/ontology/ocds/isSignatoryForContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/isSignatoryForContract> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Organisation> .
+<https://theybuyforyou.eu/ontology/ocds/isSignatoryForContract> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+<https://theybuyforyou.eu/ontology/ocds/isSignatoryForContract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Signatories extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/isSupplierFor
+<https://theybuyforyou.eu/ontology/ocds/isSupplierFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/isSupplierFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Organisation> .
+<https://theybuyforyou.eu/ontology/ocds/isSupplierFor> <http://www.w3.org/2000/01/rdf-schema#range> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid29 <http://www.w3.org/2002/07/owl#unionOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Award> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/isSupplierFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1:  Contract suppliers extension." .
+<https://theybuyforyou.eu/ontology/ocds/isSupplierFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Award <suppliers>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/isTendererFor
+<https://theybuyforyou.eu/ontology/ocds/isTendererFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/isTendererFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Organisation> .
+<https://theybuyforyou.eu/ontology/ocds/isTendererFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/isTendererFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <tenderers>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/playsRoleIn
+<https://theybuyforyou.eu/ontology/ocds/playsRoleIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://theybuyforyou.eu/ontology/ocds/playsRoleIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Organisation> .
+<https://theybuyforyou.eu/ontology/ocds/playsRoleIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> .
+<https://theybuyforyou.eu/ontology/ocds/playsRoleIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Organization <roles>." .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#comment> "Use in OCDS ontology: Budget, Tender, Award, Contract, Amendment, Document, Item, Milestone, ContractingProcess, Enquiry, Requirement." .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/dc/terms/description" .
+# 
+# http://purl.org/dc/terms/format
+<http://purl.org/dc/terms/format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/format> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/terms/format> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Use in OCDS ontology: Document." .
+<http://purl.org/dc/terms/format> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/dc/terms/format" .
+<http://purl.org/dc/terms/format> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.iana.org/assignments/media-types/media-types.xhtml" .
+# 
+# http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/language> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/terms/language> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Use in OCDS ontology: Document." .
+<http://purl.org/dc/terms/language> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/dc/terms/language" .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#comment> "Use in OCDS ontology: Project, Tender, Award, Contract, Document, Milestone, ContractingProcess, Enquiry." .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/dc/terms/title" .
+# 
+# http://schema.org/URL
+<http://schema.org/URL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/URL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/URL> <http://www.w3.org/2000/01/rdf-schema#comment> "Use in OCDS ontology: ContactPoint, Document." .
+<http://schema.org/URL> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://schema.org/URL" .
+# 
+# http://schema.org/addressCountry
+<http://schema.org/addressCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#comment> "Use in OCDS ontology: Address." .
+<http://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Address <countryName>." .
+<http://schema.org/addressCountry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://schema.org/addressCountry" .
+# 
+# http://schema.org/addressLocality
+<http://schema.org/addressLocality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#comment> "Use in OCDS ontology: Address." .
+<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Address <locality>." .
+<http://schema.org/addressLocality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://schema.org/addressLocality" .
+# 
+# http://schema.org/email
+<http://schema.org/email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/email> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/email> <http://www.w3.org/2000/01/rdf-schema#comment> "OCDS schema v1.1: ContactPoint <email>." .
+<http://schema.org/email> <http://www.w3.org/2000/01/rdf-schema#comment> "Use in OCDS ontology: ContactPoint." .
+<http://schema.org/email> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://schema.org/email" .
+# 
+# http://schema.org/faxNumber
+<http://schema.org/faxNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/faxNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/faxNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: ContactPoint <faxNumber>." .
+<http://schema.org/faxNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Use in OCDS ontology: ContactPoint." .
+<http://schema.org/faxNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://schema.org/faxNumber" .
+# 
+# http://schema.org/name
+<http://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#comment> "Use in OCDS ontology: Organization, ContactPoint, Author." .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://schema.org/name" .
+# 
+# http://schema.org/postalCode
+<http://schema.org/postalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Use in OCDS ontology: Address." .
+<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Address <postalCode>." .
+<http://schema.org/postalCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://schema.org/postalCode" .
+# 
+# http://schema.org/streetAddress
+<http://schema.org/streetAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "Use in OCDS ontology: Address." .
+<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Address <streetAddress>." .
+<http://schema.org/streetAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://schema.org/streetAddress" .
+# 
+# http://schema.org/telephone
+<http://schema.org/telephone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#comment> "OCDS schema v1.1: ContactPoint <telephone>." .
+<http://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#comment> "Use in OCDS ontology: ContactPoint." .
+<http://schema.org/telephone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://schema.org/telephone" .
+# 
+# http://www.w3.org/ns/org#identifier
+<http://www.w3.org/ns/org#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/org#identifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#notation> .
+<http://www.w3.org/ns/org#identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Organisation> .
+<http://www.w3.org/ns/org#identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Many different national and international identifier schemes are available from other vocabularies. The ORG ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value. Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for skos:notation of which this property is a specialization." .
+<http://www.w3.org/ns/org#identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Parties <identifier>, i.e., Primary identifier." .
+<http://www.w3.org/ns/org#identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.w3.org/TR/vocab-org/#org:identifier" .
+# 
+# http://xmlns.com/foaf/0.1/firstName
+<http://xmlns.com/foaf/0.1/firstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://xmlns.com/foaf/0.1/firstName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://xmlns.com/foaf/0.1/firstName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://xmlns.com/foaf/0.1/firstName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://xmlns.com/foaf/0.1/firstName" .
+# 
+# http://xmlns.com/foaf/0.1/lastName
+<http://xmlns.com/foaf/0.1/lastName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://xmlns.com/foaf/0.1/lastName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://xmlns.com/foaf/0.1/lastName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://xmlns.com/foaf/0.1/lastName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://xmlns.com/foaf/0.1/lastName" .
+# 
+# https://theybuyforyou.eu/ontology/ocds/URI
+<https://theybuyforyou.eu/ontology/ocds/URI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/URI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://theybuyforyou.eu/ontology/ocds/URI> <http://www.w3.org/2000/01/rdf-schema#comment> "Use in OCDS ontology: Organization, Budget, Transaction." .
+<https://theybuyforyou.eu/ontology/ocds/URI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/additionalIdentifier
+<https://theybuyforyou.eu/ontology/ocds/additionalIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/additionalIdentifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#notation> .
+<https://theybuyforyou.eu/ontology/ocds/additionalIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Organisation> .
+<https://theybuyforyou.eu/ontology/ocds/additionalIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Similar to https://www.w3.org/TR/vocab-org/#org:identifier" .
+<https://theybuyforyou.eu/ontology/ocds/additionalIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "The particular identifier scheme should be indicated by the datatype of the identifier value. Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for skos:notation of which this property is a specialization." .
+<https://theybuyforyou.eu/ontology/ocds/additionalIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Parties <additionalIdentifier>, i.e., Additional identifier." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/additionalItemClassification
+<https://theybuyforyou.eu/ontology/ocds/additionalItemClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/additionalItemClassification> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Item> .
+<https://theybuyforyou.eu/ontology/ocds/additionalItemClassification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/additionalItemClassification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Item <additionalClassification>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/additionalProcurementCategory
+<https://theybuyforyou.eu/ontology/ocds/additionalProcurementCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/additionalProcurementCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/additionalProcurementCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/additionalProcurementCategory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <additionalProcurementCategories>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/amendmentDate
+<https://theybuyforyou.eu/ontology/ocds/amendmentDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/amendmentDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Amendment> .
+<https://theybuyforyou.eu/ontology/ocds/amendmentDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://theybuyforyou.eu/ontology/ocds/amendmentDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Amendment <date>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/amendmentId
+<https://theybuyforyou.eu/ontology/ocds/amendmentId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/amendmentId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Amendment> .
+<https://theybuyforyou.eu/ontology/ocds/amendmentId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/amendmentId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Amendment <id>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/amendmentRationale
+<https://theybuyforyou.eu/ontology/ocds/amendmentRationale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/amendmentRationale> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Amendment> .
+<https://theybuyforyou.eu/ontology/ocds/amendmentRationale> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/amendmentRationale> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Amendment <rationale>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/authorId
+<https://theybuyforyou.eu/ontology/ocds/authorId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/authorId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/authorId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Enquiries extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/awardCriteria
+<https://theybuyforyou.eu/ontology/ocds/awardCriteria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/awardCriteria> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/awardCriteria> <http://www.w3.org/2000/01/rdf-schema#range> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid32 <http://www.w3.org/2002/07/owl#oneOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "bestProposal" .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "bestValueToGovernment" .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "costOnly" .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "lowestCost" .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "priceOnly" .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "qualityOnly" .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "ratedCriteria" .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "singleBidOnly" .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/awardCriteria> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <awardCriteria>." .
+<https://theybuyforyou.eu/ontology/ocds/awardCriteria> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://standard.open-contracting.org/latest/en/schema/codelists/#award-criteria" .
+# 
+# https://theybuyforyou.eu/ontology/ocds/awardCriteriaDetails
+<https://theybuyforyou.eu/ontology/ocds/awardCriteriaDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/awardCriteriaDetails> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/awardCriteriaDetails> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/awardCriteriaDetails> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <awardCriteriaDetails>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/awardDate
+<https://theybuyforyou.eu/ontology/ocds/awardDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/awardDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Award> .
+<https://theybuyforyou.eu/ontology/ocds/awardDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/awardDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Award <date>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/awardId
+<https://theybuyforyou.eu/ontology/ocds/awardId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/awardId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Award> .
+<https://theybuyforyou.eu/ontology/ocds/awardId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/awardId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Award <awardId>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/awardStatus
+<https://theybuyforyou.eu/ontology/ocds/awardStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/awardStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Award> .
+<https://theybuyforyou.eu/ontology/ocds/awardStatus> <http://www.w3.org/2000/01/rdf-schema#range> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid41 <http://www.w3.org/2002/07/owl#oneOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "active" .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "cancelled" .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "pending" .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "unsuccessful" .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/awardStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Award <awardStatus>." .
+<https://theybuyforyou.eu/ontology/ocds/awardStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://standard.open-contracting.org/latest/en/schema/codelists/#award-status" .
+# 
+# https://theybuyforyou.eu/ontology/ocds/bidDate
+<https://theybuyforyou.eu/ontology/ocds/bidDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/bidDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Bid> .
+<https://theybuyforyou.eu/ontology/ocds/bidDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://theybuyforyou.eu/ontology/ocds/bidDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Bids extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/bidId
+<https://theybuyforyou.eu/ontology/ocds/bidId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/bidId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Bid> .
+<https://theybuyforyou.eu/ontology/ocds/bidId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/bidId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Bids extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/bidStatus
+<https://theybuyforyou.eu/ontology/ocds/bidStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/bidStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Bid> .
+<https://theybuyforyou.eu/ontology/ocds/bidStatus> <http://www.w3.org/2000/01/rdf-schema#range> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid46 <http://www.w3.org/2002/07/owl#oneOf> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "disqualified" .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "invited" .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "pending" .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "valid" .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "withdawn" .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/bidStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Bids extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/budgetId
+<https://theybuyforyou.eu/ontology/ocds/budgetId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/budgetId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Budget> .
+<https://theybuyforyou.eu/ontology/ocds/budgetId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/budgetId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS ontology: Budget <id>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/contractId
+<https://theybuyforyou.eu/ontology/ocds/contractId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/contractId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+<https://theybuyforyou.eu/ontology/ocds/contractId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/contractId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Contract <id>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/contractStatus
+<https://theybuyforyou.eu/ontology/ocds/contractStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/contractStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+<https://theybuyforyou.eu/ontology/ocds/contractStatus> <http://www.w3.org/2000/01/rdf-schema#range> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid52 <http://www.w3.org/2002/07/owl#oneOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "active" .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "cancelled" .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "pending" .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "terminated" .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/contractStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Contract <status>." .
+<https://theybuyforyou.eu/ontology/ocds/contractStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://standard.open-contracting.org/latest/en/schema/codelists/#contract-status" .
+# 
+# https://theybuyforyou.eu/ontology/ocds/dateContractSigned
+<https://theybuyforyou.eu/ontology/ocds/dateContractSigned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/dateContractSigned> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+<https://theybuyforyou.eu/ontology/ocds/dateContractSigned> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://theybuyforyou.eu/ontology/ocds/dateContractSigned> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Contract <dateSigned>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/dateDocumentModified
+<https://theybuyforyou.eu/ontology/ocds/dateDocumentModified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/dateDocumentModified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Document> .
+<https://theybuyforyou.eu/ontology/ocds/dateDocumentModified> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://theybuyforyou.eu/ontology/ocds/dateDocumentModified> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Document <dateModified>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/dateDocumentPublished
+<https://theybuyforyou.eu/ontology/ocds/dateDocumentPublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/dateDocumentPublished> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Document> .
+<https://theybuyforyou.eu/ontology/ocds/dateDocumentPublished> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://theybuyforyou.eu/ontology/ocds/dateDocumentPublished> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Document <datePublished>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/dateEnquiryAnswered
+<https://theybuyforyou.eu/ontology/ocds/dateEnquiryAnswered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/dateEnquiryAnswered> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Enquiry> .
+<https://theybuyforyou.eu/ontology/ocds/dateEnquiryAnswered> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://theybuyforyou.eu/ontology/ocds/dateEnquiryAnswered> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Enquiries extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/discussionThreadId
+<https://theybuyforyou.eu/ontology/ocds/discussionThreadId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/discussionThreadId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Discussion> .
+<https://theybuyforyou.eu/ontology/ocds/discussionThreadId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/discussionThreadId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Enquiries extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/documentId
+<https://theybuyforyou.eu/ontology/ocds/documentId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/documentId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Document> .
+<https://theybuyforyou.eu/ontology/ocds/documentId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/documentId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Document <id>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/documentType
+<https://theybuyforyou.eu/ontology/ocds/documentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/documentType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Document> .
+<https://theybuyforyou.eu/ontology/ocds/documentType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid57 <http://www.w3.org/2002/07/owl#oneOf> _:genid97 .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "assetAndLiabilityAssessment" .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid96 .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "awardNotice" .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid95 .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "bidders" .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid94 .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "biddingDocuments" .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid93 .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "billOfQuantity" .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid92 .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "cancellationDetails" .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid91 .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "clarifications" .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid90 .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "complaints" .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid89 .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "completionCertificate" .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid88 .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "conflictOfInterest" .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid87 .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "contractAnnexe" .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid86 .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "contractArrangements" .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid85 .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "contractDraft" .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "contractGuarantees" .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid83 .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "contractNotice" .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid82 .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "contractSchedule" .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid81 .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "contractSigned" .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid80 .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "contractSummary" .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "debarments" .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid78 .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "eligibilityCriteria" .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "environmentalImpact" .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid76 .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "evaluationCriteria" .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "evaluationReports" .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "feasibilityStudy" .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "finalAudit" .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "financialProgressReport" .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "hearingNotice" .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "illustration" .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "marketStudies" .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "needsAssessment" .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "physicalProgressReport" .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "procurementPlan" .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "projectPlan" .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "riskProvisions" .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "shortlistedFirms" .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "subContract" .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "submissionDocuments" .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "technicalSpecifications" .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "tenderNotice" .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "winningBid" .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/documentType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema: Document <documentType>." .
+<https://theybuyforyou.eu/ontology/ocds/documentType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://standard.open-contracting.org/latest/en/schema/codelists/#document-type" .
+# 
+# https://theybuyforyou.eu/ontology/ocds/eligibilityCriteria
+<https://theybuyforyou.eu/ontology/ocds/eligibilityCriteria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/eligibilityCriteria> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/eligibilityCriteria> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/eligibilityCriteria> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <eligibilityCriteria>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/enquiry
+<https://theybuyforyou.eu/ontology/ocds/enquiry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/enquiry> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/enquiry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://theybuyforyou.eu/ontology/ocds/enquiry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <hasEnquiries>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/enquiryAnswer
+<https://theybuyforyou.eu/ontology/ocds/enquiryAnswer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/enquiryAnswer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Enquiry> .
+<https://theybuyforyou.eu/ontology/ocds/enquiryAnswer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/enquiryAnswer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Enquiries extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/enquiryDate
+<https://theybuyforyou.eu/ontology/ocds/enquiryDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/enquiryDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Enquiry> .
+<https://theybuyforyou.eu/ontology/ocds/enquiryDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://theybuyforyou.eu/ontology/ocds/enquiryDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Enquiries extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/enquiryId
+<https://theybuyforyou.eu/ontology/ocds/enquiryId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/enquiryId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Enquiry> .
+<https://theybuyforyou.eu/ontology/ocds/enquiryId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/enquiryId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Enquiries extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/itemId
+<https://theybuyforyou.eu/ontology/ocds/itemId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/itemId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Item> .
+<https://theybuyforyou.eu/ontology/ocds/itemId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/itemId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Item <id>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/legalName
+<https://theybuyforyou.eu/ontology/ocds/legalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/legalName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/legalName> <http://www.w3.org/2000/01/rdf-schema#comment> "Use in OCDS ontology: Organization." .
+<https://theybuyforyou.eu/ontology/ocds/legalName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Identifier <legalName>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/lotId
+<https://theybuyforyou.eu/ontology/ocds/lotId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/lotId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Lot> .
+<https://theybuyforyou.eu/ontology/ocds/lotId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/lotId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Lots extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/lotStatus
+<https://theybuyforyou.eu/ontology/ocds/lotStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/lotStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Lot> .
+<https://theybuyforyou.eu/ontology/ocds/lotStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/lotStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Lots extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/mainProcurementCategory
+<https://theybuyforyou.eu/ontology/ocds/mainProcurementCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/mainProcurementCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/mainProcurementCategory> <http://www.w3.org/2000/01/rdf-schema#range> _:genid98 .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid98 <http://www.w3.org/2002/07/owl#oneOf> _:genid101 .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "goods" .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid100 .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "services" .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid99 .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "works" .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/mainProcurementCategory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <mainProcurementCategory>." .
+<https://theybuyforyou.eu/ontology/ocds/mainProcurementCategory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://standard.open-contracting.org/latest/en/schema/codelists/#procurement-category" .
+# 
+# https://theybuyforyou.eu/ontology/ocds/mileStoneStatus
+<https://theybuyforyou.eu/ontology/ocds/mileStoneStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/mileStoneStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Milestone> .
+<https://theybuyforyou.eu/ontology/ocds/mileStoneStatus> <http://www.w3.org/2000/01/rdf-schema#range> _:genid102 .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid102 <http://www.w3.org/2002/07/owl#oneOf> _:genid106 .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "met" .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid105 .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "notMet" .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid104 .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "partiallyMet" .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid103 .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "scheduled" .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/mileStoneStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Milestone <status>." .
+<https://theybuyforyou.eu/ontology/ocds/mileStoneStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://standard.open-contracting.org/latest/en/schema/codelists/#milestone-status" .
+# 
+# https://theybuyforyou.eu/ontology/ocds/milestoneCode
+<https://theybuyforyou.eu/ontology/ocds/milestoneCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Milestone> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Milestone <code>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/milestoneDateMet
+<https://theybuyforyou.eu/ontology/ocds/milestoneDateMet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneDateMet> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Milestone> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneDateMet> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneDateMet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Milestone <dateMet>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/milestoneDateModified
+<https://theybuyforyou.eu/ontology/ocds/milestoneDateModified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneDateModified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Milestone> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneDateModified> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneDateModified> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Milestone <dateModified>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/milestoneDueDate
+<https://theybuyforyou.eu/ontology/ocds/milestoneDueDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneDueDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Milestone> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneDueDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneDueDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Milestone <dueDate>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/milestoneId
+<https://theybuyforyou.eu/ontology/ocds/milestoneId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Milestone> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Milestone <id>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/milestoneType
+<https://theybuyforyou.eu/ontology/ocds/milestoneType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Milestone> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid107 .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid107 <http://www.w3.org/2002/07/owl#oneOf> _:genid114 .
+_:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "approval" .
+_:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid113 .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "assessment" .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid112 .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "delivery" .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid111 .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "engagement" .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid110 .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "financing" .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid109 .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "preProcurement" .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid108 .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "reporting" .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/milestoneType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Milestone <type>." .
+<https://theybuyforyou.eu/ontology/ocds/milestoneType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://standard.open-contracting.org/latest/en/schema/codelists/#milestone-type" .
+# 
+# https://theybuyforyou.eu/ontology/ocds/numberOfTenderers
+<https://theybuyforyou.eu/ontology/ocds/numberOfTenderers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/numberOfTenderers> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/numberOfTenderers> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://theybuyforyou.eu/ontology/ocds/numberOfTenderers> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <numberOfTenderers>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/periodDurationInDays
+<https://theybuyforyou.eu/ontology/ocds/periodDurationInDays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/periodDurationInDays> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/periodDurationInDays> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://theybuyforyou.eu/ontology/ocds/periodDurationInDays> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Period <durationInDays>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/periodEndDate
+<https://theybuyforyou.eu/ontology/ocds/periodEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/periodEndDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/periodEndDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://theybuyforyou.eu/ontology/ocds/periodEndDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: periodEndDate." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/periodMaxExtentDate
+<https://theybuyforyou.eu/ontology/ocds/periodMaxExtentDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/periodMaxExtentDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/periodMaxExtentDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://theybuyforyou.eu/ontology/ocds/periodMaxExtentDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Period <maxExtentDate>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/periodStartDate
+<https://theybuyforyou.eu/ontology/ocds/periodStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/periodStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/periodStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://theybuyforyou.eu/ontology/ocds/periodStartDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Period <startDate>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/procurementMethod
+<https://theybuyforyou.eu/ontology/ocds/procurementMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/procurementMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/procurementMethod> <http://www.w3.org/2000/01/rdf-schema#range> _:genid115 .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid115 <http://www.w3.org/2002/07/owl#oneOf> _:genid119 .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "direct" .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid118 .
+_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "limited" .
+_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid117 .
+_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "open" .
+_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid116 .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "selective" .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/procurementMethod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <procurementMethod>." .
+<https://theybuyforyou.eu/ontology/ocds/procurementMethod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://standard.open-contracting.org/latest/en/schema/codelists/#method" .
+# 
+# https://theybuyforyou.eu/ontology/ocds/procurementMethodDetails
+<https://theybuyforyou.eu/ontology/ocds/procurementMethodDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/procurementMethodDetails> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/procurementMethodDetails> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/procurementMethodDetails> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <procurementMethodDetails>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/procurementMethodRationale
+<https://theybuyforyou.eu/ontology/ocds/procurementMethodRationale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/procurementMethodRationale> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/procurementMethodRationale> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/procurementMethodRationale> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <procurementMethodRationale>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/procurementRationale
+<https://theybuyforyou.eu/ontology/ocds/procurementRationale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/procurementRationale> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Plan> .
+<https://theybuyforyou.eu/ontology/ocds/procurementRationale> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/procurementRationale> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Plan <rationale>" .
+# 
+# https://theybuyforyou.eu/ontology/ocds/projectId
+<https://theybuyforyou.eu/ontology/ocds/projectId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/projectId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Project> .
+<https://theybuyforyou.eu/ontology/ocds/projectId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/projectId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Budget <projectId>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/quantity
+<https://theybuyforyou.eu/ontology/ocds/quantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/quantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://theybuyforyou.eu/ontology/ocds/quantity> <http://www.w3.org/2000/01/rdf-schema#comment> "Use in OCDS ontology: Item." .
+<https://theybuyforyou.eu/ontology/ocds/quantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema: Item <qauntity>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/region
+<https://theybuyforyou.eu/ontology/ocds/region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/region> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/region> <http://www.w3.org/2000/01/rdf-schema#comment> "Use in OCDS ontology: Address." .
+<https://theybuyforyou.eu/ontology/ocds/region> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema: Address <region>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/requirementId
+<https://theybuyforyou.eu/ontology/ocds/requirementId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/requirementId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Requirement> .
+<https://theybuyforyou.eu/ontology/ocds/requirementId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/submissionMethod
+<https://theybuyforyou.eu/ontology/ocds/submissionMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/submissionMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/submissionMethod> <http://www.w3.org/2000/01/rdf-schema#range> _:genid120 .
+_:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid120 <http://www.w3.org/2002/07/owl#oneOf> _:genid124 .
+_:genid124 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid124 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "electronicAuction" .
+_:genid124 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid123 .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "electronicSubmission" .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid122 .
+_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "inPerson" .
+_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid121 .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "written" .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/submissionMethod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <submissionMethod>." .
+<https://theybuyforyou.eu/ontology/ocds/submissionMethod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://standard.open-contracting.org/latest/en/schema/codelists/#submission-method" .
+# 
+# https://theybuyforyou.eu/ontology/ocds/submissionMethodDetails
+<https://theybuyforyou.eu/ontology/ocds/submissionMethodDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/submissionMethodDetails> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/submissionMethodDetails> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/submissionMethodDetails> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <submissionMethodDetails>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/tenderId
+<https://theybuyforyou.eu/ontology/ocds/tenderId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/tenderId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/tenderId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/tenderId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <id>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/tenderStatus
+<https://theybuyforyou.eu/ontology/ocds/tenderStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/tenderStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/tenderStatus> <http://www.w3.org/2000/01/rdf-schema#range> _:genid125 .
+_:genid125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid125 <http://www.w3.org/2002/07/owl#oneOf> _:genid132 .
+_:genid132 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid132 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "active" .
+_:genid132 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid131 .
+_:genid131 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid131 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "cancelled" .
+_:genid131 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid130 .
+_:genid130 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid130 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "complete" .
+_:genid130 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid129 .
+_:genid129 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid129 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "planned" .
+_:genid129 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid128 .
+_:genid128 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid128 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "planning" .
+_:genid128 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid127 .
+_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "unsuccessful" .
+_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid126 .
+_:genid126 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid126 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "withdrawn" .
+_:genid126 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/tenderStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender <status>." .
+<https://theybuyforyou.eu/ontology/ocds/tenderStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://standard.open-contracting.org/latest/en/schema/codelists/#tender-status" .
+# 
+# https://theybuyforyou.eu/ontology/ocds/transactionDataSource
+<https://theybuyforyou.eu/ontology/ocds/transactionDataSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/transactionDataSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Transaction> .
+<https://theybuyforyou.eu/ontology/ocds/transactionDataSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/transactionDataSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Transaction <source>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/transactionDate
+<https://theybuyforyou.eu/ontology/ocds/transactionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/transactionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Transaction> .
+<https://theybuyforyou.eu/ontology/ocds/transactionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://theybuyforyou.eu/ontology/ocds/transactionDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Transaction <date>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/transactionId
+<https://theybuyforyou.eu/ontology/ocds/transactionId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/transactionId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Transaction> .
+<https://theybuyforyou.eu/ontology/ocds/transactionId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/transactionId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Transaction <id>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/unit
+<https://theybuyforyou.eu/ontology/ocds/unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/unit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/unit> <http://www.w3.org/2000/01/rdf-schema#comment> "Use in OCDS ontology: Item." .
+<https://theybuyforyou.eu/ontology/ocds/unit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema: Item <unit>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/valueAmount
+<https://theybuyforyou.eu/ontology/ocds/valueAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/valueAmount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/valueAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://theybuyforyou.eu/ontology/ocds/valueAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Value <amount>." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/valueCurrency
+<https://theybuyforyou.eu/ontology/ocds/valueCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://theybuyforyou.eu/ontology/ocds/valueCurrency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/valueCurrency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://theybuyforyou.eu/ontology/ocds/valueCurrency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Value <currency>." .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Enquiries extension." .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://xmlns.com/foaf/0.1/Person" .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Address
+<https://theybuyforyou.eu/ontology/ocds/Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Address> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data type properties: addressCountry, addressLocality, postalCode, streeAddress, region." .
+<https://theybuyforyou.eu/ontology/ocds/Address> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Adress." .
+<https://theybuyforyou.eu/ontology/ocds/Address> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/addressCountry> .
+<https://theybuyforyou.eu/ontology/ocds/Address> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/addressLocality> .
+<https://theybuyforyou.eu/ontology/ocds/Address> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/postalCode> .
+<https://theybuyforyou.eu/ontology/ocds/Address> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/streetAddress> .
+<https://theybuyforyou.eu/ontology/ocds/Address> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <https://theybuyforyou.eu/ontology/ocds/region> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Amendment
+<https://theybuyforyou.eu/ontology/ocds/Amendment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Amendment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid133 .
+_:genid133 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid133 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasAmendment> .
+_:genid133 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Amendment> .
+<https://theybuyforyou.eu/ontology/ocds/Amendment> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data type properties: description." .
+<https://theybuyforyou.eu/ontology/ocds/Amendment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Amendment." .
+<https://theybuyforyou.eu/ontology/ocds/Amendment> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Award
+<https://theybuyforyou.eu/ontology/ocds/Award> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Award> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid134 .
+_:genid134 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid134 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasAmendment> .
+_:genid134 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Amendment> .
+<https://theybuyforyou.eu/ontology/ocds/Award> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid135 .
+_:genid135 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid135 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasAwardValue> .
+_:genid135 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/Award> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid136 .
+_:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid136 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod> .
+_:genid136 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/Award> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid137 .
+_:genid137 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid137 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasAwardedItem> .
+_:genid137 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Item> .
+<https://theybuyforyou.eu/ontology/ocds/Award> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid138 .
+_:genid138 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid138 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasDocument> .
+_:genid138 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Document> .
+<https://theybuyforyou.eu/ontology/ocds/Award> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid139 .
+_:genid139 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid139 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/isIssuedForTender> .
+_:genid139 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/Award> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid140 .
+_:genid140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid140 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/isRelatedToLot> .
+_:genid140 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Lot> .
+<https://theybuyforyou.eu/ontology/ocds/Award> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data type properties: title, description." .
+<https://theybuyforyou.eu/ontology/ocds/Award> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Award." .
+<https://theybuyforyou.eu/ontology/ocds/Award> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> .
+<https://theybuyforyou.eu/ontology/ocds/Award> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/title> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Bid
+<https://theybuyforyou.eu/ontology/ocds/Bid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Bid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid141 .
+_:genid141 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid141 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasBidValue> .
+_:genid141 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/Bid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid142 .
+_:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid142 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasDocument> .
+_:genid142 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Document> .
+<https://theybuyforyou.eu/ontology/ocds/Bid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Bid statistics extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Budget
+<https://theybuyforyou.eu/ontology/ocds/Budget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Budget> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid143 .
+_:genid143 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid143 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasReservedValue> .
+_:genid143 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/Budget> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data type properties: description, URI." .
+<https://theybuyforyou.eu/ontology/ocds/Budget> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Budget." .
+<https://theybuyforyou.eu/ontology/ocds/Budget> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> .
+<https://theybuyforyou.eu/ontology/ocds/Budget> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <https://theybuyforyou.eu/ontology/ocds/URI> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/ContactPoint
+<https://theybuyforyou.eu/ontology/ocds/ContactPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/ContactPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data type properties: faxNumber, telephone, email, addressCountry, postalCode, addressLocality, streetAddress, name, url." .
+<https://theybuyforyou.eu/ontology/ocds/ContactPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: ContactPoint." .
+<https://theybuyforyou.eu/ontology/ocds/ContactPoint> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/URL> .
+<https://theybuyforyou.eu/ontology/ocds/ContactPoint> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/addressCountry> .
+<https://theybuyforyou.eu/ontology/ocds/ContactPoint> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/addressLocality> .
+<https://theybuyforyou.eu/ontology/ocds/ContactPoint> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/email> .
+<https://theybuyforyou.eu/ontology/ocds/ContactPoint> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/faxNumber> .
+<https://theybuyforyou.eu/ontology/ocds/ContactPoint> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/name> .
+<https://theybuyforyou.eu/ontology/ocds/ContactPoint> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/postalCode> .
+<https://theybuyforyou.eu/ontology/ocds/ContactPoint> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/streetAddress> .
+<https://theybuyforyou.eu/ontology/ocds/ContactPoint> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/telephone> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Contract
+<https://theybuyforyou.eu/ontology/ocds/Contract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Contract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid144 .
+_:genid144 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid144 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/extendsContract> .
+_:genid144 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+<https://theybuyforyou.eu/ontology/ocds/Contract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid145 .
+_:genid145 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid145 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasAmendment> .
+_:genid145 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Amendment> .
+<https://theybuyforyou.eu/ontology/ocds/Contract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid146 .
+_:genid146 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid146 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasContractImplementation> .
+_:genid146 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Implementation> .
+<https://theybuyforyou.eu/ontology/ocds/Contract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid147 .
+_:genid147 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid147 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasContractPeriod> .
+_:genid147 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/Contract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid148 .
+_:genid148 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid148 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasContractValue> .
+_:genid148 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/Contract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid149 .
+_:genid149 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid149 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasContractedItem> .
+_:genid149 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Item> .
+<https://theybuyforyou.eu/ontology/ocds/Contract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid150 .
+_:genid150 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid150 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasDocument> .
+_:genid150 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Document> .
+<https://theybuyforyou.eu/ontology/ocds/Contract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid151 .
+_:genid151 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid151 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasMilestone> .
+_:genid151 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Milestone> .
+<https://theybuyforyou.eu/ontology/ocds/Contract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid152 .
+_:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid152 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/isIssuedForAward> .
+_:genid152 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Award> .
+<https://theybuyforyou.eu/ontology/ocds/Contract> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data type properties: title, description." .
+<https://theybuyforyou.eu/ontology/ocds/Contract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Contact." .
+<https://theybuyforyou.eu/ontology/ocds/Contract> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> .
+<https://theybuyforyou.eu/ontology/ocds/Contract> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/title> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/ContractingProcess
+<https://theybuyforyou.eu/ontology/ocds/ContractingProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/ContractingProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid153 .
+_:genid153 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid153 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasAward> .
+_:genid153 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Award> .
+<https://theybuyforyou.eu/ontology/ocds/ContractingProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid154 .
+_:genid154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid154 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasContract> .
+_:genid154 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+<https://theybuyforyou.eu/ontology/ocds/ContractingProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid155 .
+_:genid155 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid155 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasPlan> .
+_:genid155 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Plan> .
+<https://theybuyforyou.eu/ontology/ocds/ContractingProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid156 .
+_:genid156 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid156 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess> .
+_:genid156 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> .
+<https://theybuyforyou.eu/ontology/ocds/ContractingProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid157 .
+_:genid157 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid157 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasTender> .
+_:genid157 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/ContractingProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Title and description properties is extracted from the following extension: OCDS v1.1. Process level title and description." .
+<https://theybuyforyou.eu/ontology/ocds/ContractingProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data type properties: title, description." .
+<https://theybuyforyou.eu/ontology/ocds/ContractingProcess> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1." .
+<https://theybuyforyou.eu/ontology/ocds/ContractingProcess> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> .
+<https://theybuyforyou.eu/ontology/ocds/ContractingProcess> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/title> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Discussion
+<https://theybuyforyou.eu/ontology/ocds/Discussion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Discussion> <http://www.w3.org/2000/01/rdf-schema#comment> "OCDS schema v1.1: Enquiries extension." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Document
+<https://theybuyforyou.eu/ontology/ocds/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Document> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid158 .
+_:genid158 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid158 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/isRelatedToLot> .
+_:genid158 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Lot> .
+<https://theybuyforyou.eu/ontology/ocds/Document> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data type properties: language, format, title, description, url." .
+<https://theybuyforyou.eu/ontology/ocds/Document> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Document." .
+<https://theybuyforyou.eu/ontology/ocds/Document> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> .
+<https://theybuyforyou.eu/ontology/ocds/Document> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/format> .
+<https://theybuyforyou.eu/ontology/ocds/Document> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/language> .
+<https://theybuyforyou.eu/ontology/ocds/Document> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/title> .
+<https://theybuyforyou.eu/ontology/ocds/Document> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/URL> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Enquiry
+<https://theybuyforyou.eu/ontology/ocds/Enquiry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Enquiry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid159 .
+_:genid159 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid159 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasEnquiryAuthor> .
+_:genid159 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://xmlns.com/foaf/0.1/Person> .
+<https://theybuyforyou.eu/ontology/ocds/Enquiry> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data type properties: title, description." .
+<https://theybuyforyou.eu/ontology/ocds/Enquiry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Enquiries extension." .
+<https://theybuyforyou.eu/ontology/ocds/Enquiry> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> .
+<https://theybuyforyou.eu/ontology/ocds/Enquiry> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/title> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Implementation
+<https://theybuyforyou.eu/ontology/ocds/Implementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Implementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid160 .
+_:genid160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid160 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasDocument> .
+_:genid160 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Document> .
+<https://theybuyforyou.eu/ontology/ocds/Implementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid161 .
+_:genid161 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid161 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasMilestone> .
+_:genid161 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Milestone> .
+<https://theybuyforyou.eu/ontology/ocds/Implementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid162 .
+_:genid162 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid162 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasTransaction> .
+_:genid162 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Transaction> .
+<https://theybuyforyou.eu/ontology/ocds/Implementation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Implementation." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Item
+<https://theybuyforyou.eu/ontology/ocds/Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid163 .
+_:genid163 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid163 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification> .
+_:genid163 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://theybuyforyou.eu/ontology/ocds/Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid164 .
+_:genid164 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid164 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasClassification> .
+_:genid164 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://theybuyforyou.eu/ontology/ocds/Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid165 .
+_:genid165 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid165 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry> .
+_:genid165 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Enquiry> .
+<https://theybuyforyou.eu/ontology/ocds/Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid166 .
+_:genid166 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid166 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/isRelatedToLot> .
+_:genid166 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Lot> .
+<https://theybuyforyou.eu/ontology/ocds/Item> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also following data properties: quantity, unit, description." .
+<https://theybuyforyou.eu/ontology/ocds/Item> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Item." .
+<https://theybuyforyou.eu/ontology/ocds/Item> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> .
+<https://theybuyforyou.eu/ontology/ocds/Item> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <https://theybuyforyou.eu/ontology/ocds/quantity> .
+<https://theybuyforyou.eu/ontology/ocds/Item> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <https://theybuyforyou.eu/ontology/ocds/unit> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Lot
+<https://theybuyforyou.eu/ontology/ocds/Lot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Lot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid167 .
+_:genid167 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid167 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasLotValue> .
+_:genid167 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/Lot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid168 .
+_:genid168 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid168 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry> .
+_:genid168 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Enquiry> .
+<https://theybuyforyou.eu/ontology/ocds/Lot> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data types: title, description." .
+<https://theybuyforyou.eu/ontology/ocds/Lot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Lots extension." .
+<https://theybuyforyou.eu/ontology/ocds/Lot> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> .
+<https://theybuyforyou.eu/ontology/ocds/Lot> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/title> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Milestone
+<https://theybuyforyou.eu/ontology/ocds/Milestone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Milestone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid169 .
+_:genid169 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid169 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasDocument> .
+_:genid169 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Document> .
+<https://theybuyforyou.eu/ontology/ocds/Milestone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid170 .
+_:genid170 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid170 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/isRelatedToLot> .
+_:genid170 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Lot> .
+<https://theybuyforyou.eu/ontology/ocds/Milestone> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data type properties: title, description." .
+<https://theybuyforyou.eu/ontology/ocds/Milestone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Milestone." .
+<https://theybuyforyou.eu/ontology/ocds/Milestone> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> .
+<https://theybuyforyou.eu/ontology/ocds/Milestone> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/title> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Organisation
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid171 .
+_:genid171 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid171 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasAdditionalContactPoint> .
+_:genid171 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/ContactPoint> .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid172 .
+_:genid172 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid172 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasAddress> .
+_:genid172 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Address> .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid173 .
+_:genid173 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid173 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasContactPoint> .
+_:genid173 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/ContactPoint> .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid174 .
+_:genid174 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid174 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasSubmittedBid> .
+_:genid174 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Bid> .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid175 .
+_:genid175 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid175 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/isBuyerFor> .
+_:genid175 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid176 .
+_:genid176 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid176 <http://www.w3.org/2002/07/owl#unionOf> _:genid178 .
+_:genid178 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid178 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+_:genid178 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid177 .
+_:genid177 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid177 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> .
+_:genid177 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid179 .
+_:genid179 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid179 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/isPayeeFor> .
+_:genid179 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Transaction> .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid180 .
+_:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid180 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/isPayerFor> .
+_:genid180 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Transaction> .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid181 .
+_:genid181 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid181 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor> .
+_:genid181 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid182 .
+_:genid182 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid182 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/isSignatoryForContract> .
+_:genid182 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid183 .
+_:genid183 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid183 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/isSupplierFor> .
+_:genid183 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid184 .
+_:genid184 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid184 <http://www.w3.org/2002/07/owl#unionOf> _:genid186 .
+_:genid186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Award> .
+_:genid186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid185 .
+_:genid185 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid185 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://theybuyforyou.eu/ontology/ocds/Contract> .
+_:genid185 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid187 .
+_:genid187 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid187 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/isTendererFor> .
+_:genid187 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Tender> .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid188 .
+_:genid188 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid188 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/playsRoleIn> .
+_:genid188 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/ContractingProcess> .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data type properties: legalName, name, URI." .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Organization." .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://schema.org/name> .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <https://theybuyforyou.eu/ontology/ocds/URI> .
+<https://theybuyforyou.eu/ontology/ocds/Organisation> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <https://theybuyforyou.eu/ontology/ocds/legalName> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Period
+<https://theybuyforyou.eu/ontology/ocds/Period> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Period> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Period." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Plan
+<https://theybuyforyou.eu/ontology/ocds/Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Plan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid189 .
+_:genid189 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid189 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasBudget> .
+_:genid189 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Budget> .
+<https://theybuyforyou.eu/ontology/ocds/Plan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid190 .
+_:genid190 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid190 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasDocument> .
+_:genid190 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Document> .
+<https://theybuyforyou.eu/ontology/ocds/Plan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid191 .
+_:genid191 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid191 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasMilestone> .
+_:genid191 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Milestone> .
+<https://theybuyforyou.eu/ontology/ocds/Plan> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Planning." .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Project
+<https://theybuyforyou.eu/ontology/ocds/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Project> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data type properties: title." .
+<https://theybuyforyou.eu/ontology/ocds/Project> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Budget." .
+<https://theybuyforyou.eu/ontology/ocds/Project> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/title> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Requirement
+<https://theybuyforyou.eu/ontology/ocds/Requirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Requirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data type properties: description." .
+<https://theybuyforyou.eu/ontology/ocds/Requirement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Requirements extension." .
+<https://theybuyforyou.eu/ontology/ocds/Requirement> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Tender
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid192 .
+_:genid192 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid192 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasAmendment> .
+_:genid192 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Amendment> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid193 .
+_:genid193 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid193 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod> .
+_:genid193 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid194 .
+_:genid194 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid194 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasDocument> .
+_:genid194 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Document> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid195 .
+_:genid195 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid195 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasEnquiry> .
+_:genid195 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Enquiry> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid196 .
+_:genid196 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid196 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasEnquiryPeriod> .
+_:genid196 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid197 .
+_:genid197 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid197 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod> .
+_:genid197 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid198 .
+_:genid198 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid198 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured> .
+_:genid198 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Item> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid199 .
+_:genid199 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid199 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasLot> .
+_:genid199 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Lot> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid200 .
+_:genid200 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid200 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue> .
+_:genid200 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid201 .
+_:genid201 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid201 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasMilestone> .
+_:genid201 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Milestone> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid202 .
+_:genid202 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid202 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue> .
+_:genid202 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid203 .
+_:genid203 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid203 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasReceivedBid> .
+_:genid203 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Bid> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid204 .
+_:genid204 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid204 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasRequirement> .
+_:genid204 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Requirement> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid205 .
+_:genid205 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid205 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod> .
+_:genid205 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Period> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data type properties: title, description." .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Tender." .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/description> .
+<https://theybuyforyou.eu/ontology/ocds/Tender> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <http://purl.org/dc/terms/title> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Transaction
+<https://theybuyforyou.eu/ontology/ocds/Transaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Transaction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid206 .
+_:genid206 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid206 <http://www.w3.org/2002/07/owl#onProperty> <https://theybuyforyou.eu/ontology/ocds/hasTransactionValue> .
+_:genid206 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://theybuyforyou.eu/ontology/ocds/Value> .
+<https://theybuyforyou.eu/ontology/ocds/Transaction> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses also the following data type properties: URI." .
+<https://theybuyforyou.eu/ontology/ocds/Transaction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Transaction." .
+<https://theybuyforyou.eu/ontology/ocds/Transaction> <https://theybuyforyou.eu/ontology/ocds/usesDataProperty> <https://theybuyforyou.eu/ontology/ocds/URI> .
+# 
+# https://theybuyforyou.eu/ontology/ocds/Value
+<https://theybuyforyou.eu/ontology/ocds/Value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://theybuyforyou.eu/ontology/ocds/Value> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OCDS schema v1.1: Value." .
+# 
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
